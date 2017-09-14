@@ -1,7 +1,6 @@
 import os
 from flask import Flask, render_template, request, url_for, redirect
 
-
 app = Flask(__name__)
 @app.route('/')
 def reroute_path():
@@ -15,8 +14,8 @@ def default_home():
 
 
 
-if __name__ == '__main__':
-    PORT = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=PORT)
+# if __name__ == '__main__':
+#     PORT = int(os.environ.get("PORT", 5000))
+#     app.run(host='0.0.0.0', port=PORT)
 
 
