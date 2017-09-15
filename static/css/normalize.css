@@ -598,7 +598,7 @@ code{
 .nav-link:focus{
   outline: webkit-focus-ring-color auto 5px;
 }
-@media (min-width: 991px){
+@media (min-width: 1200px){
   .navbar-nav{
     height: 47px;
   }
@@ -607,10 +607,17 @@ code{
 .nav-link{
   padding-top: 0.45em;
 }
-@media (max-width: 991px){
+@media (max-width: 1200px){
   .nav-item{
     text-align: center;
     margin: 7px;
+  }
+
+  .navbar-brand img{
+    display:block;
+    margin: 0 auto;
+    height: 190px;
+    width: auto; 
   }
 }
 li.sub-list, #doc-tutorial>ol, #doc-config>ol{
@@ -778,12 +785,24 @@ footer p{
   margin-top: 10px;
 }
 
+.card{
+  margin-top: 25px;
+}
+
 #errormsg, #authcode{
   text-align: center;
-  font-size: 20px;
-  font-size: 2.0rem;
+  font-size: 28px;
+  font-size: 2.8rem;
+  margin-top: 30px;
 }
 
 #errormsg{
   color: red;
+}
+
+@media screen and (max-width: 501px){
+  .navbar-fixed-bottom a{
+    font-size: 14px;
+    font-size:1.4rem;
+  }
 }

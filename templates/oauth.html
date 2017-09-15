@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,9 +39,6 @@
                 </li>
                 <li class="nav-item " >
                     <a class="nav-link" href="/docs/">Documentation </a>
-                </li>
-                <li class="nav-item active-nav">
-                    <a class="nav-link" href="/cb">OAuth<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/papers/">Papers</a>
@@ -69,8 +66,8 @@
                
                 <div class="card">
                     <div class="card-block">
-                        <h3 class="card-title"> Sciunit Authorization Code</h3>
-                        <h4 class="card-subtitle mb-2">Use this code in the Sciunit-CLI</h4>
+                        <h3 class="card-title"> Sciunit Authorization Code </h3>
+                        <h4 class="card-subtitle mb-2">Copy this code and use it in the Sciunit-CLI. </h4>
                         {% if code %}
                            <p id="authcode" class="card-text">{{code}}</p>
                         {% else %}
@@ -93,7 +90,6 @@
                         <a class="p-2" href="/">Home</a>
                         <a class="p-2" href="/download/">Download</a>
                         <a class="p-2" href="/docs/">Documentation</a>
-                        <a class="p-2" href="/cb">OAuth</a>
                         <a class="p-2" href="/papers/">Papers</a>
                         <a class="p-2" href="/support/">Support</a>
                     </div>
