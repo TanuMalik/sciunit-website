@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Geotrust Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Work+Sans" rel="stylesheet">
+    <!-- Link to Bootstrap usind CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="/" class="navbar-brand">
+        	<img src="/static/assets/images/new_GeoTrust.png" id="sciunit-logo" width="135" height="110" alt="Geotrust">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                 <li class='nav-item'>
+                    <a class="nav-link" href="/">Sciunit</a>
+                </li>
+                <li class="nav-item active-nav">
+                    <a class="nav-link" href="#">Download </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/docs/">Documentation </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="/demo/">Demo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/papers/">Papers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/support">Support</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <h2 class="page-title">Installation Guide</h2>
+                <hr/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <ol>
+                    <li>
+                        <p> Sciunit-CLI runs on most Linux distributions. Install the following sciunit dependencies with your distribution's
+                            package manager:
+                            <ul>
+                                <li>git</li>
+                                <li>python-dev</li>
+                                <li>python-setuptools</li>
+                                <li>g++</li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Download the Sciunit-CLI code from bitbucket with <a href="https://bitbucket.org/geotrust/sciunit-cli/get/a66517fa58d0.zip">this link</a> or with the following command:</p>
+                        <p><code>$ git clone -b Local https://bitbucket.org/geotrust/sciunit-cli.git</code></p>
+                    </li>
+                    <li>
+                        <p>Install Sciunit-CLI:
+                            <p><code>$ cd sciunit-cli/sciunit/client</code></p>
+                            <p><code>$ sudo python setup.py install</code></p>
+                        </p>
+                        <p>And run the following commands:
+                            <p><code>$ cd ../..</code></p>
+                            <p><code>$ sudo python setup.py install globus</code></p>
+                            <p><code>$ sudo python setup.py install</code></p>
+                        </p>
+                    </li>
+
+                        <p>You are now ready to run the Sciunit-CLI! See the <a href="/docs/">documentation page</a> for details
+                            on using Sciunit-CLI</p>
+                    </li>
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="footer">
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-12">
+                    <div class="navbar-fixed-bottom d-flex flex-row flex-wrap justify-content-between">
+                        <a class="p-2" href="/">Home</a>
+                        <a class="p-2" href="#">Download</a>
+                        <a class="p-2" href="/docs/">Documentation</a>
+                        <a class="p-2" href="/demo/">Demo</a>
+                        <a class="p-2" href="/papers/">Papers</a>
+                        <a class="p-2" href="/support/">Support</a>
+                    </div>
+                    <p> The Geotrust Project is supported by the National Science Foundation.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

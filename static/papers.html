@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The GeoTrust Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Work+Sans" rel="stylesheet">
+    <!-- Link to Bootstrap usind CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+
+</head>
+
+<body>
+   <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="/" class="navbar-brand">
+        	<img src="/static/assets/images/new_GeoTrust.png" id="sciunit-logo" width="135" height="110" alt="Geotrust">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                 <li class='nav-item '>
+                    <a class="nav-link" href="/">Sciunit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/download/">Download </a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="/docs/">Documentation </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cb">OAuth<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active-nav">
+                    <a class="nav-link" href="/papers/">Papers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/support/">Support</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr />
+    <div class="container-fluid">
+        <div class="row">
+	    <nav class="col-lg-2" id=myScrollspy>
+                <ul class="nav nav-pills flex-column" data-spy="affix" data-offset-top="205" id="stickyContents">
+                    <li><a href="#research">Research Papers</a></li>
+                    <li><a href="#application">Application Papers</a></li>
+                    <li><a href="#presentations">Presentations</a></li>
+                    <li><a href="#video">Video</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-6 offset-lg-1">
+                <div class="page-header">
+                    <h2 class="page-title">Papers</h2>
+                    <hr />
+                </div>
+		 <ol>
+                    <li>
+                        <!-- Paper #1-->
+                        <p>PROVaaS: Provenance-as-a-Service. In Theory and Practice of Provenance (TaPP) (poster)<span class='date'> 2014</span>                            [<a href="http://dbgroup.cdm.depaul.edu/~tanu/SciDataspace/SciDataspace.html">PDF</a>]</p>
+                    </li>
+                    <li>
+                        <!--Paper #2-->
+                        <p>H. Meng, R. Kommineni, Q. Pham, R. Gardner, T. Malik, and D. Thain. <em>An Invariant Framework for Conducting Reproducible Computational Science.</em>                            In Journal of Computational Science, Elsevier,<span class="date"> 2015. </span><strong>Invited</strong>                            
+                            [<a href="https://www.academia.edu/15629769/An_Invariant_Framework_for_Conducting_Reproducible_Computational_Science">PDF</a>],
+                            [<a href="https://sites.google.com/site/invariantcompatlas/">Software</a>]
+                        </p>
+                        <p class='paper-abstract'>
+                            Computational reproducibility depends on the ability to not only isolate necessary and sufficient computational artifacts
+                            but also to preserve those artifacts for later re-execution. Both isolation and preservation
+                            present challenges in large part due to the complexity of existing software and systems as well
+                            as the implicit dependencies, resource distribution, and shifting compatibility of systScience
+                            projects are increasingly investing in computational reproducibility. Constructing software pipelines
+                            to demonstrate reproducibility is also becoming increasingly common. To aid the process of constructing
+                            pipelines, science project members often adopt reproducible methods and tools. One such tool
+                            is CDE, which is a software packaging tool that encapsulates source code, datasets and environments.
+                            However, CDE does not include information about origins of dependencies. Consequently when multiple
+                            CDE packages are combined and merged to create a software pipeline, several issues arise requiring
+                            an author to manually verify compatibility of distributions, environment variables, software
+                            dependencies and compiler options. In this work, we propose software provenance to be included
+                            as part of CDE so that resulting provenance-included CDE packages can be easily used for creating
+                            software pipelines. We describe provenance attributes that must be included and how they can
+                            be efficiently stored in a light-weight CDE package. Furthermore, we show how a provenance in
+                            a package can be used for creating software pipelines and maintained as new packages are created.
+                            We experimentally evaluate the overhead of auditing and maintaining provenance and compare with
+                            heavy weight approaches for reproducibility such as virtualization. Our experiments indicate
+                            minimal overheads. ems that result over time ”all of which conspire to break the reproducibility
+                            of an application. Sandboxing is a technique that has been used extensively in OS environments
+                            in order to isolate computational artifacts. Several tools were proposed recently that employ
+                            sandboxing as a mechanism to ensure reproducibility. However, none of these tools preserve the
+                            sandboxed application for re-distribution to a larger scientific community aspects that are equally
+                            crucial for ensuring reproducibility as sandboxing itself. In this paper, we describe a framework
+                            of com- bined sandboxing and preservation, which is not only efficient and invariant, but also
+                            practical for large-scale reproducibility. We present case studies of complex high-energy physics
+                            applications and show how the framework can be useful for sandboxing, preserving, and distributing
+                            applications. We report on the completeness, performance, and efficiency of the framework, and
+                            suggest possible standardization approches.
+                        </p>
+                    </li>
+                    <li>
+                        <!--Paper #3-->
+                        <p>Q. Pham, S. Thaler, T. Malik, B. Glavic, I. Foster. Light-weight Database Virtualization. In IEEE
+                            International Conference on Data Engineering (ICDE),<span class="date"> 2015. </span> [
+                            <a href="https://www.academia.edu/15628762/LDV_Light-weight_Database_Virtualization" target="_blank">PDF</a>],
+                            [<a href="http://www.slideshare.net/TanuMalik/ldv-lightweight-database-virtualization" target="_blank">PPT</a>],
+                            [<a href="https://github.com/legendOfZelda/LDV" target="_blank">Software</a>]
+                        </p>
+                        <p class='paper-abstract'>
+                            We present a light-weight database virtualization (LDV) system that allows users to share and re-execute applications that
+                            operate on a relational database (DB). Previous methods for sharing DB applications, such as
+                            companion websites and virtual machine images (VMIs), support neither easy and efficient re-execution
+                            nor the sharing of only a relevant DB subset. LDV addresses these issues by monitoring application
+                            execution, including DB operations, and using the resulting execution trace to create a lightweight
+                            re-executable package. A LDV package includes, in addition to the application, either the DB
+                            management system (DBMS) and relevant data or, if the DBMS and/or data cannot be shared, just
+                            the application-DBMS communications for replay during re-execution. We introduce a linked DB-operating
+                            system provenance model and show how to infer data dependencies based on temporal information
+                            about the DB operations performed by the application's process(es). We use this model to determine
+                            the DB subset that needs to be included in a package in order to enable re-execution. We compare
+                            LDV with other sharing methods in terms of package size, monitoring overhead, and re-execution
+                            overhead. We show that LDV packages are often more than an order of magnitude smaller than a
+                            VMI for the same application, and have negligible re-execution overhead.
+                        </p>
+                    </li>
+                    <li>
+                        <!--Paper #4-->
+                        <p>Q. Pham, T. Malik, I. Foster. SOLE: Towards Descriptive and Interactive Publications. In Implementing
+                            Reproducible Research, Editor: Victoria Stodden, et. al, CRC Press,<span class="date"> 2014.</span>                            [
+                            <a href="https://www.academia.edu/17347896/SOLE_Towards_Descriptive_and_Interactive_Publications" target="_blank">PDF</a>],
+                            [<a href="https://gitlab.com/quanpt/sole-pdf-reader.git">Software</a>]
+                        </p>
+                        <p class="paper-abstract">
+                            Prior to the computational-driven revolution in science, research papers provided the pri-mary mechanism for sharing novel
+                            methods and data. Papers described experiments involving small amount of data, derivations on
+                            that data, and associated methods and algorithms. Readers reproduced the results by repeating
+                            the physical experiment, performing hand calculation, and/or logical argument. The scientific
+                            method in this decade has become decisively computational, involving large quantities of data,
+                            complex data manipulation tasks, and large, and often distributed, software stacks. The research
+                            paper, in its current text form, is only able to summarize the associated data and computation
+                            rather than reproduce it computationally. While papers corroborate descriptions through indirect
+                            means, such as by building companion websites that share data and software packages, these external
+                            websites continue to remain disconnected from the content within the paper, making it difficult
+                            to verify claims and reproduce results. There is an critical need for systems that minimize this
+                            disconnect. We describe Science Object Linking and Embedding (SOLE), a framework for creating
+                            descriptive and interactive publications by linking them with associated science objects, such
+                            as source codes, datasets, annotations, workflows, re-playable packages, and virtual machine
+                            images. SOLE provides a suite of tools that assist the author to create and host science objects
+                            that can then be linked with research papers for the purpose of assessment, repeatability, and
+                            verification of research. The framework also creates a linkable representation of the science
+                            object with the publication and manages a bibliography-like specification of science objects.
+                            In this chapter, we introduce SOLE, and describe its use for augmenting the content of computation-based
+                            scientific publications. We present examples from climate science, chemistry, biology, and computer
+                            science.
+                        </p>
+                    </li>
+                    <li>
+                        <!--Paper #5-->
+                        <p>Q. Pham, T. Malik, I. Foster. Auditing and Maintaing Provenance in Software Packages. In International
+                            Provenance and Annotation Workshop (IPAW),<span class="date"> 2014.</span> </p>
+                        [<a href="https://www.academia.edu/17065827/Auditing_and_Maintaining_Provenance_in_Software_Packages"
+                            target="_blank">PDF</a>], [
+                        <a href="http://www.slideshare.net/TanuMalik/auditing-and-maintaining-provenance-in-software-packages" target="_blank">PPT</a>],
+                        [
+                        <a href="https://gitlab.com/quanpt/provenance-to-use.git" target="_blank">Software</a>]
+                        </p>
+                        <p class="paper-abstract">
+                            Science projects are increasingly investing in computational reproducibility. Constructing software pipelines to demonstrate
+                            reproducibility is also becoming increasingly common. To aid the process of constructing pipelines,
+                            science project members often adopt reproducible methods and tools. One such tool is CDE, which
+                            is a software packaging tool that encapsulates source code, datasets and environments. However,
+                            CDE does not include information about origins of dependencies. Consequently when multiple CDE
+                            packages are combined and merged to create a software pipeline, several issues arise requiring
+                            an author to manually verify compatibility of distributions, environment variables, software
+                            dependencies and compiler options. In this work, we propose software provenance to be included
+                            as part of CDE so that resulting provenance-included CDE packages can be easily used for creating
+                            software pipelines. We describe provenance attributes that must be included and how they can
+                            be efficiently stored in a light-weight CDE package. Furthermore, we show how a provenance in
+                            a package can be used for creating software pipelines and maintained as new packages are created.
+                            We experimentally evaluate the overhead of auditing and maintaining provenance and compare with
+                            heavy weight approaches for reproducibility such as virtualization. Our experiments indicate
+                            minimal overheads.
+                        </p>
+                    </li>
+                    <li>
+                        <!--Paper #6-->
+                        <p> D. Zhao, C. Shou, T. Malik, I. Raicu. Distributed Data Provenance for Large-Scale Data-Intensive
+                            Computing, In IEEE Cluster, <span class="date">2013.</span> [
+                            <a href="https://www.academia.edu/17065820/Distributed_data_provenance_for_large-scale_data-intensive_computing" target="_blank">PDF</a>]
+                        </p>
+                        <p class="paper-abstract">
+                            It has become increasingly important to capture and understand the origins and derivation of data (its provenance). A key
+                            issue in evaluating the feasibility of data provenance is its performance, overheads, and scalability.
+                            In this paper, we explore the feasibility of a general metadata storage and management layer
+                            for parallel file systems, in which metadata includes both file operations and provenance metadata.
+                            We experimentally investigate the design optimality whether provenance metadata should be loosely-coupled
+                            or tightly integrated with a file metadata storage systems. We consider two systems that have
+                            applied sim- ilar distributed concepts to metadata management, but focusing singularly on kind
+                            of metadata: (i) FusionFS, which implements a distributed file metadata management based on distributed
+                            hash tables, and (ii) SPADE, which uses a graph database to store audited provenance data and
+                            provides distributed module for querying provenance. Our results on a 32-node cluster show that
+                            FusionFS+SPADE is a promising prototype with negligible provenance overhead and has promise to
+                            scale to petascale and beyond. Furthermore, FusionFS with its own storage layer for provenance
+                            capture is able to scale up to 1K nodes on BlueGene/P supercomputer.
+                        </p>
+                    </li>
+                    <li>
+                        <!--Paper #7-->
+                        <p>Q. Pham, T. Malik, I. Foster. Using Provenance for Repeatability. In USENIX NSDI Workshop on Theory
+                            and Practice of Provenance (TaPP), <span class="date">2013.</span>[<a href="https://www.academia.edu/15630065/Using_Provenance_for_Repeatability"
+                                target="_blank">PDF</a>], [
+                            <a href="http://www.slideshare.net/TanuMalik/ptu-tapp13" target="_blank">PPT</a>], [
+                            <a href="https://gitlab.com/quanpt/provenance-to-use.git" target="_blank">Software</a>]
+                        </p>
+                        <p class="paper-abstract">
+                            We present Provenance-to-use (PTU), a tool that minimizes computation time during repeatability testing. Authors can use
+                            PTU to build a package of their software program and include a provenance trace of an initial,
+                            reference execution. Testers can perform a partial deterministic replay of the package by choosing
+                            a subset of the processes based on the processâ€™ compute, memory and I/O utilization obtained
+                            during the reference execution. Using the provenance trace, PTU guarantees that events are processed
+                            in the same order using the same data from one execution to the next. We show the efficiency
+                            of PTU for conducting repeatability testing of workflow-based scientific programs.
+                        </p>
+                    </li>
+                    <li>
+                        <!--Paper #8-->
+                        <p> T. Malik, A. Gehani, D. Tariq, F. Zaffar. Managing and Querying Distributed Data Provenance in SPADE.
+                            In Data Provenance and Data Management for eScience, Springer, <span class="date">2012.</span>                            [
+                            <a href="https://www.academia.edu/17347677/Sketching_Distributed_Data_Provenance" target="_blank">PDF</a>],
+                            [
+                            <a href="https://github.com/ashish-gehani/SPADE" target="_blank">Software</a>]
+                        </p>
+                        <p class="paper-abstract">Users can determine the precise origins of their data by collecting detailed provenance records.
+                            However, auditing at a finer grain produces large amounts of metadata. To efficiently manage
+                            the collected provenance, several provenance management systems, including SPADE, record provenance
+                            on the hosts where it is gen- erated. Distributed provenance raises the issue of efficient reconstruction
+                            during the query phase. Recursively querying provenance metadata or computing its transitive
+                            closure is known to have limited scalability and cannot be used for large provenance graphs.
+                            We present matrix filters, which are novel data structures for representing graph information,
+                            and demonstrate their utility for improving query efficiency with experiments on provenance metadata
+                            gathered while executing distributed workflow applications.
+                        </p>
+                    </li>
+                    <li>
+                        <!--Paper #9-->
+                        <p> A. Gehani, D. Tariq, B. Baig, T. Malik. Policy-Based Integration of Provenance Metadata. In IEEE
+                            International Symposium on Policies for Distributed Systems and Networks (POLICY), <span class="date">2011.</span>                            [
+                            <a href="https://www.academia.edu/2678704/Policy-Based_Integration_of_Provenance_Metadata" target="_blank">PDF</a>]
+                        </p>
+                        <p class="paper-abstract">Reproducibility has been a cornerstone of the scientific method for hundreds of years. The range
+                            of sources from which data now originates, the diversity of the individual manipulations performed,
+                            and the complexity of the orchestrations of these operations all limit the reproducibility that
+                            a scientist can ensure solely by manually recording their actions.
+                        </p>
+
+                    </li>
+                    <li>
+                        <!--paper #10-->
+                        <p> T. Malik, L. Nistor, A. Gehani. Tracking and Sketching Distributed Data Provenance. In IEEE eScience,
+                            <span class="date">2010.</span> [
+                            <a href="https://www.academia.edu/1383857/Tracking_and_Sketching_Distributed_Data_Provenance" target="_blank">PDF</a>],
+                            [
+                            <a href="https://github.com/ashish-gehani/SPADE" target="_blank">Software</a>]
+                        </p>
+                        <p class="paper-abstract">Current provenance collection systems typically gather metadata on remote hosts and submit it to
+                            a central server. In contrast, several data-intensive scientific applications require a decentralized
+                            architecture in which each host maintains an authoritative local repository of the provenance
+                            metadata gathered on that host. The latter approach allows the system to handle the large amounts
+                            of metadata generated when auditing occurs at fine granularity, and allows users to retain control
+                            over their provenance records. The decentralized architecture,however, increases the complexity
+                            of auditing, tracking, and querying distributed provenance. We describe a system for capturing
+                            data provenance in distributed applications, and the use of provenance sketches to optimize subsequent
+                            data provenance queries. Experiments with data gathered from distributed workï¬‚ow applications
+                            demonstrate the feasibility of a decentralized provenance management system and improvements
+                            in the efficiency of provenance queries
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3 class="page-title" id="presentations">Presentations</h3>
+                <ol>
+                    <li>
+                        <p><a href="http://www.slideshare.net/TanuMalik/the-earthcube-all-hands-meeting-may-2015" target="_blank">GeoDataspace: Better Tools for Metadata Management</a>                            The EarthCube All Hands Meeting, May 2015.</p>
+                    </li>
+                    <li>
+                        <p><a href="http://www.slideshare.net/TanuMalik/globusworld-2015" target="_blank">A Reproducible Framework Powered By Globus</a>The
+                            Globus World, Apr. 2015. (<em>Presented by Kyle Chard</em>) </p>
+                    </li>
+                    <li>
+                        <p><a href="http://www.slideshare.net/TanuMalik/geodataspace-simplifying-data-management-tasks-with-globus"
+                                target="_blank">GeoDataspace: Simplifying Data Management Tasks with Globus</a>. The American
+                            Geophysical Union (AGU), Dec. 2014.</p>
+                    </li>
+                    <li>
+                        <p>Reproducibility is hard. Not NP-hard. The Notre Dame DASPOS Workshop, Sept. 2014. </p>
+                    </li>
+                    <li>
+                        <p>
+                            Towards Verifiable Publications. The SIAM Annual Meeting, Jul. 2014
+                        </p>
+                    </li>
+                    <li>
+                        <p>Active Publications, IEEE eScience, 2013</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-12">
+                    <div class="navbar-fixed-bottom d-flex flex-row flex-wrap justify-content-between">
+                        <a class="p-2" href="/">Home</a>
+                        <a class="p-2" href="/download/">Download</a>
+                        <a class="p-2" href="/docs">Documentation</a>
+                        <a class="p-2" href="/cb">OAuth</a>
+                        <a class="p-2" href="#">Papers</a>
+                        <a class="p-2" href="/support/">Support</a>
+                    </div>
+                    <p> The Geotrust Project is supported by the National Science Foundation.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
