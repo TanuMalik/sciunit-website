@@ -1,15 +1,7 @@
 from flask import Flask, url_for, request, make_response, render_template, abort
 from flask_mail import Mail, Message
 import os
-import sys
-import mz
-import re
-if sys.version_info[0] == 3:
-    import _thread
-else:
-    import thread as _thread
-import atexit
-import subprocess
+
 
 
 app = Flask(__name__)
@@ -21,37 +13,6 @@ app.config['MAIL_USERNAME'] = '93eb3942ae0e1f'
 app.config['MAIL_PASSWORD'] = '65e58901acaab7'
 mail = Mail(app)
 
-jqueue = mz.Queue()
-jpool = mz.Pool()
-app = Flask(__name__)
-
-
-def cleanup():
-    jqueue.join()
-    jpool.close()
-
-
-@app.before_first_request
-def startup():
-    atexit.register(cleanup)
-
-    for i in range(os.sysconf('SC_NPROCESSORS_ONLN')):
-        _thread.start_new_thread(run_job, ())
-    jpool.start(1 if mz.KEEP_TIME > 2.0 else mz.KEEP_TIME / 2.0)
-
-
-def run_job():
-    while 1:
-        try:
-            # super safe...
-            with jqueue.get() as mj:
-                # ensure the existence of log and proc
-                jpool.checkin(mj)
-        except Exception as e:
-            app.logger.error('%s: %s' % (e.__class__.__name__, str(e)))
-        finally:
-            # log the error, don't hang
-            jqueue.task_done()
 
 @app.route("/")
 def homepage():
