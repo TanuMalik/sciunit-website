@@ -515,7 +515,8 @@ h3{
 p,li, samp, input, textarea{
   font-size: 18px;
   font-size: 1.8rem;
-  font-family: 'Work Sans', 'sans-serif'
+  font-family: 'Work Sans', 'sans-serif';
+  word-wrap: break-word;
 }
 
 strong{
@@ -800,9 +801,39 @@ footer p{
   color: red;
 }
 
+pre{
+  padding: 3px 8px;
+  overflow-x: auto;
+  background-color: #f6f6f6;
+}
+
+pre > code{
+  color: #bd4147;
+}
+
 @media screen and (max-width: 501px){
   .navbar-fixed-bottom a{
     font-size: 14px;
     font-size:1.4rem;
+  }
+}
+
+@media screen and (max-width: 1075px){
+ 
+  p code{
+    white-space: initial;
+
+  }
+  pre{
+    white-space: pre-wrap;
+    overflow-x: auto;
+    background-color: #f6f6f6;
+    padding: 3px 8px;
+   
+  }
+  pre code{
+    
+    font-size: 1.4rem;
+    font-size: 14px;
   }
 }
