@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>The Geotrust Project</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato|Work+Sans|Ubuntu+Mono" rel="stylesheet">
     <!-- Link to Bootstrap usind CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+
     <link rel="stylesheet" href="/static/css/normalize.css">
 
 
+
 </head>
+
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
-  <nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
+    <nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +33,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/download/">Download </a>
                 </li>
-                <li class="nav-item active-nav" >
+                <li class="nav-item active-nav">
                     <a class="nav-link" href="#">Documentation </a>
                 </li>
                 <li class="nav-item">
@@ -57,8 +59,8 @@
                             <li><a href="#doc-tutorial-example1">Package one application</a></li>
                         </ul> -->
 
-                    <li><a href="#doc-troubleshoot">Troubleshooting</a></li>
-                    <li><a href="#doc-appendix">Appendix</a></li>
+                        <li><a href="#doc-troubleshoot">Troubleshooting</a></li>
+                        <li><a href="#doc-appendix">Appendix</a></li>
                 </ul>
             </nav>
             <div class="col-lg-8">
@@ -75,14 +77,22 @@
                         <div id="doc-overview">
                             <h3 class="doc-section-title">I. Overview</h3>
                             <p>
-                                Sciunit is a cloud-based framework for enabling reproducible computational analysis. Currently, the framework is used within the geosciences domain to automatically create Docker containers of geoscience applications. The framework consists of two components: the client (i.e., Sciunit-CLI) and the server (i.e., the Sciunit hub). We present in detail the Sciunit-CLI in this document.
+                                Sciunit is a cloud-based framework for enabling reproducible computational analysis. Currently, the framework is used within
+                                the geosciences domain to automatically create Docker containers of geoscience applications.
+                                The framework consists of two components: the client (i.e., Sciunit-CLI) and the server (i.e.,
+                                the Sciunit hub). We present in detail the Sciunit-CLI in this document.
                             </p>
                         </div>
                         <hr />
                         <div id="doc-getting-started">
                             <h3 class="doc-section-title">II. Getting Started</h3>
                             <p>
-                                This section provides information to new users how to get started using the Sciunit-CLI on Linux machines (all of the parts presented in this document were tested on Ubuntu 16.04). In particular, we show how to install and how to configure Sciunit-CLI in the installation and configuration sections. Next, we present some running examples with Sciunit-CLI in the tutorial section. Finally, we report some common issues may occur during running time and our recommended solutions for those issues.
+                                This section provides information to new users how to get started using the Sciunit-CLI on Linux machines (all of the parts
+                                presented in this document were tested on Ubuntu 16.04). In particular, we show how to install
+                                and how to configure Sciunit-CLI in the installation and configuration sections. Next, we
+                                present some running examples with Sciunit-CLI in the tutorial section. Finally, we report
+                                some common issues may occur during running time and our recommended solutions for those
+                                issues.
                             </p>
                         </div>
                         <hr />
@@ -103,28 +113,37 @@
                                     <ul>
                                         <li>
                                             <p> a Globus account from
-                                            <a href="http://www.globus.org" target="_blank">www.globus.org</a></p>
+                                                <a href="http://www.globus.org" target="_blank">www.globus.org</a></p>
                                         </li>
                                         <li>
                                             <p>Obtain a Hydroshare account from
-                                            <a href="http://www.hydroshare.org" target="_blank">www.hydroshare.org</a></p>
+                                                <a href="http://www.hydroshare.org" target="_blank">www.hydroshare.org</a></p>
                                         </li>
                                     </ul>
                                     <br>
                                     <p>
-                                        Since in our Sciunit-CLI, we support a secure and efficient data transfer protocol using Globus and a trusted and reliable publish environment with Hydroshare, a Globus account is required to share and publish sciunit packages at Sciunit.org; whereas a Hydroshare account is used to publish sciunit packages at Hydroshare.
+                                        Since in our Sciunit-CLI, we support a secure and efficient data transfer protocol using Globus and a trusted and reliable
+                                        publish environment with Hydroshare, a Globus account is required to share and publish
+                                        sciunit packages at Sciunit.org; whereas a Hydroshare account is used to publish
+                                        sciunit packages at Hydroshare.
                                     </p>
                                     <p>
-                                        However, Sciunit.org is currently not set up for hosting sciunits from multiple users. Therefore, once obtaining a Globus account, Globus username should be emailed to <em>scidataspace@gmail.com</em> in order to share and publish sciunit packages at Sciunit.org.
+                                        However, Sciunit.org is currently not set up for hosting sciunits from multiple users. Therefore, once obtaining a Globus
+                                        account, Globus username should be emailed to <em>scidataspace@gmail.com</em>                                        in order to share and publish sciunit packages at Sciunit.org.
                                     </p>
                                 </li>
                                 <li>
                                     <p><strong>Configure Sciunit-CLI</strong></p>
                                     <p>
-                                        The configuration of globus account will be launched automatically i</PATH/TO/execution_file>n the first time running Sciunit-CLI. This information is recorded in ~/.sciunit folder in order to avoid asking for this information in the later times. In this step, Sciunit-CLI also sets up your machine as an endpoint for uploading sciunits to the server. Here is the details of this first time running Sciunit-CLI.
+                                        The configuration of globus account will be launched automatically i</PATH/TO/execution_file>n
+                                        the first time running Sciunit-CLI. This information is recorded in ~/.sciunit folder
+                                        in order to avoid asking for this information in the later times. In this step, Sciunit-CLI
+                                        also sets up your machine as an endpoint for uploading sciunits to the server. Here
+                                        is the details of this first time running Sciunit-CLI.
                                     </p>
                                     <p>
-                                        After installation of Sciunit-CLI, users can launch Sciunit-CLI by using <code>$ sciunit-cli.py</code>. Here is the output:
+                                        After installation of Sciunit-CLI, users can launch Sciunit-CLI by using <code>$ sciunit-cli.py</code>.
+                                        Here is the output:
                                     </p>
                                     <div class="console-output">
                                         <samp>
@@ -143,58 +162,69 @@
                                         </samp>
                                     </div>
 
-                                    <p>In later times, no Globus configuration information will be asked. The interface is shown in the fowlling figure:</p>
-                                    <img class="img-fluid"src="/static/assets/images/Image_2.jpg" alt='sci_unit.py startup message' />
-                                    <br> 
+                                    <p>In later times, no Globus configuration information will be asked. The interface is shown
+                                        in the fowlling figure:</p>
+                                    <img class="img-fluid" src="/static/assets/images/Image_2.jpg" alt='sci_unit.py startup message' />
+                                    <br>
                                     <p>
-                                        The configuration of Hydroshare account will be done in the first time users publish their packages. Similar to Globus configuration, this configuration process only happens in the first time publishing a sciunit package to Hydroshare. Users' Hydroshare authentication information is also stored in ~/.sciunit folder. For more details about Hydroshare configuration, see the Example 4: "Publish a sciunit package to hydroshare" in the Tutorial section.
+                                        The configuration of Hydroshare account will be done in the first time users publish their packages. Similar to Globus configuration,
+                                        this configuration process only happens in the first time publishing a sciunit package
+                                        to Hydroshare. Users' Hydroshare authentication information is also stored in ~/.sciunit
+                                        folder. For more details about Hydroshare configuration, see the Example 4: "Publish
+                                        a sciunit package to hydroshare" in the Tutorial section.
                                     </p>
                                 </li>
                                 <li>
                                     <p><strong>Run "helloworld" with Sciunit-CLI</strong></p>
                                     <p>
-                                        Example Sciunit applications can be found under the examples directory. Applications are included with a README file to help run them.
+                                        Example Sciunit applications can be found under the examples directory. Applications are included with a README file to help
+                                        run them.
                                     </p>
                                     <ol>
                                         <li>
                                             <p>Run Sciunit-CLI from command-line:
-                                            <code>$ sciunit-cli.py</code></p>
+                                                <code>$ sciunit-cli.py</code></p>
                                             <!-- Insert image_3 here -->
-                                            <img class="img-fluid"src="/static/assets/images/Image_3.jpg" alt="sciuint run commmand" title="Console printout (step 1)">
+                                            <img class="img-fluid" src="/static/assets/images/Image_3.jpg" alt="sciuint run commmand" title="Console printout (step 1)">
                                             <p>Note that, in this example we used
-                                            <code>$ sudo sciunit-cli.py</code> to run in root mode becuase some applications (e.g. hellowordl.sh) may require it due to the permission conflicts between users. Without these conflicts, this root mode is not necessary.</p>
+                                                <code>$ sudo sciunit-cli.py</code> to run in root mode becuase some applications
+                                                (e.g. hellowordl.sh) may require it due to the permission conflicts between
+                                                users. Without these conflicts, this root mode is not necessary.</p>
                                         </li>
                                         <li>
-                                            <p>Sciunit-CLI allows users to manage many application sor projects. Each of them can be contained in a sciunit composed by many packages. to start a sciunit, users can use command:
-                                            <code>--sciunit start &lt;sciunit_name&gt;</code></p>
+                                            <p>Sciunit-CLI allows users to manage many application sor projects. Each of them
+                                                can be contained in a sciunit composed by many packages. to start a sciunit,
+                                                users can use command:
+                                                <code>--sciunit start &lt;sciunit_name&gt;</code></p>
                                             <!-- Insert image 4 here -->
-                                            <img class="img-fluid"src="/static/assets/images/Image_4.jpg" alt="Image4">
+                                            <img class="img-fluid" src="/static/assets/images/Image_4.jpg" alt="Image4">
                                         </li>
                                         <li>
                                             <p>Package the HelloWorld app in Examples directory, with command
-                                            <code>--package &lt;/PATH/TO/execution_file&gt;</code></p>
+                                                <code>--package &lt;/PATH/TO/execution_file&gt;</code></p>
                                             <!-- Insert image 5 -->
-                                            <img class="img-fluid"src="/static/assets/images/Image_5.jpg" alt="Image5">
+                                            <img class="img-fluid" src="/static/assets/images/Image_5.jpg" alt="Image5">
 
-                                             <p>This generates package_hashID (10d47b6ca8e4d26d37bcb7fd29b826c8fa951a29). This is the ID of this package. The package_id is unique value in within a sciunit.</p>
+                                            <p>This generates package_hashID (10d47b6ca8e4d26d37bcb7fd29b826c8fa951a29). This
+                                                is the ID of this package. The package_id is unique value in within a sciunit.</p>
                                         </li>
                                         <li>
                                             <p>List all packages in this sciunit:
-                                            <code>--package list</code></p>
+                                                <code>--package list</code></p>
                                             <!-- Insert image 6 -->
-                                            <img class="img-fluid"src="/static/assets/images/Image_6.jpg" alt="Image6">
+                                            <img class="img-fluid" src="/static/assets/images/Image_6.jpg" alt="Image6">
                                         </li>
                                         <li>
-                                           <p> Re-run the package in this sciunit with its id:
-                                            <code>--repeat &lt;pacakge_id&gt;</code></p>
+                                            <p> Re-run the package in this sciunit with its id:
+                                                <code>--repeat &lt;pacakge_id&gt;</code></p>
                                             <!-- Insert image 7 -->
-                                            <img class="img-fluid"src="/static/assets/images/Image_7.jpg" alt="Image7">
+                                            <img class="img-fluid" src="/static/assets/images/Image_7.jpg" alt="Image7">
                                         </li>
                                         <li>
                                             <p>To exit Sciunit-CLI:
-                                            <code>--stop</code></p>
+                                                <code>--stop</code></p>
                                             <!-- insert image 8 -->
-                                            <img class="img-fluid"src="/static/assets/images/Image_8.jpg" alt="Image8">
+                                            <img class="img-fluid" src="/static/assets/images/Image_8.jpg" alt="Image8">
                                         </li>
                                     </ol>
                                 </li>
@@ -203,177 +233,271 @@
                         <hr />
                         <div id="doc-tutorial">
                             <h3 class="doc-section-title">V. Sciunit Tutorial</h3>
-                            <p>This hands-on tutorial give a quick ~20 minute taste of creating, sharing, and publishing sciunits using the CLI. The created sciunits are geoscience domain specific and are published to Hydroshare, a geoscience publish repository</p>
+                            <p>This hands-on tutorial give a quick ~20 minute taste of creating, sharing, and publishing sciunits
+                                using the CLI. The created sciunits are geoscience domain specific and are published to Hydroshare,
+                                a geoscience publish repository</p>
                             <ol>
                                 <li>
                                     <p><strong>Introduction: What are sciunit?</strong></p>
                                     <p>
-                                        Sciunits are efficient, lightweight, composed by self-contained packages of computational experiments that can be guaranteed to repeat or reproduce regardless of deployment issues. Scientists build sciunits for self-curation of experiments, for sharing their experiments with others, and for publishing their experiments on community hubs. Sciunits aim to eliminate "does not work on my computer" problems in the scientific community.
+                                        Sciunits are efficient, lightweight, composed by self-contained packages of computational experiments that can be guaranteed
+                                        to repeat or reproduce regardless of deployment issues. Scientists build sciunits
+                                        for self-curation of experiments, for sharing their experiments with others, and
+                                        for publishing their experiments on community hubs. Sciunits aim to eliminate "does
+                                        not work on my computer" problems in the scientific community.
                                     </p>
                                     <p>
-                                        The Sciunit-CLI helps you build sciunits. Packaging of application can be accomplished with a single command, using a statement like:
+                                        The Sciunit-CLI helps you build sciunits. Packaging of application can be accomplished with a single command, using a statement
+                                        like:
                                     </p>
                                     <code>--package &lt;/PATH/TO/execution_file&gt;</code>
                                     <p>
-                                        This command will build a lightweight, self-contained package, independent of any programming language or specific OS. This package can be described by three kinds of metadata: annotation metadata, provenance metadata, and version metadata. Provenance and version metadata can be automatically generated. The package along with its metadata can be, preserved, shared, or published.
+                                        This command will build a lightweight, self-contained package, independent of any programming language or specific OS. This
+                                        package can be described by three kinds of metadata: annotation metadata, provenance
+                                        metadata, and version metadata. Provenance and version metadata can be automatically
+                                        generated. The package along with its metadata can be, preserved, shared, or published.
                                     </p>
                                 </li>
                                 <li id="doc-tutorial-example1">
                                     <p><strong>Example 1: Package a single science application</strong></p>
                                     <p>
-                                        This first example creates a sciunit from the Food inspection evaluation application (FIE) (this is an open-source project created by the City of Chicago and available for downloading at: <a href="https://github.com/Chicago/food-inspections-evaluation">Github.com/Chicago/food-inspections-evaluation</a>) which was written in R and reads data from the food_inspections.Rds in the 'default' directory and outputs a violation_dat.Rds file.
+                                        This first example creates a sciunit from the Food inspection evaluation application (FIE) (this is an open-source project
+                                        created by the City of Chicago and available for downloading at:
+                                        <a
+                                            href="https://github.com/Chicago/food-inspections-evaluation">Github.com/Chicago/food-inspections-evaluation</a>) which was written in R and reads
+                                            data from the food_inspections.Rds in the 'default' directory and outputs a violation_dat.Rds
+                                            file.
                                     </p>
                                     <ol>
-                                        <li><p>Start a Sciunit-CLI:
-                                            <code>$ sciunit-cli.py</code></p>
+                                        <li>
+                                            <p>Start a Sciunit-CLI:
+                                                <code>$ sciunit-cli.py</code></p>
                                         </li>
-                                        <li><p>Start a sciunit:
-                                            <code>--sciunit start &lt;sciunit_name&gt;</code></p>
+                                        <li>
+                                            <p>Start a sciunit:
+                                                <code>--sciunit start &lt;sciunit_name&gt;</code></p>
                                         </li>
                                         <li>
                                             <p>Run and create a package in the current sciunit:
                                                 <code>--package &lt;/PATH/TO/execution_file&gt;</code>
                                             </p>
                                             <!-- Insert image -->
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex1_img1.jpg" alt="example_1_img_1">
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex1_img1.jpg" alt="example_1_img_1">
                                         </li>
-                                        <li><p>In this example, we careted a sciunit, called Mysciunit, and run the execution file (runbashRandomForestOneStep.sh). This .sh script file will execute an R program in FIE.</p>
+                                        <li>
+                                            <p>In this example, we careted a sciunit, called Mysciunit, and run the execution
+                                                file (runbashRandomForestOneStep.sh). This .sh script file will execute an
+                                                R program in FIE.</p>
                                             <!-- Insert image -->
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex1_img2.jpg" alt="example_1_img_2">
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex1_img2.jpg" alt="example_1_img_2">
                                         </li>
-                                        <li><p>A 32-bit package_hash ID is created and associates with the current package. This package_id is unique within the current sciunit (Mysciunit).</p></li>
-                                        <li><p>Created package will be inserted to our database (i.e., vvpkg.bin and vvpkg.db) in ~/.sciunit/package directory.</p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex1_img3.jpg" alt="example_1_img_3"></li>
-                                        <li><p>Exit Sciunit-CLI:
-                                            <code>--stop</code></p>
+                                        <li>
+                                            <p>A 32-bit package_hash ID is created and associates with the current package.
+                                                This package_id is unique within the current sciunit (Mysciunit).</p>
+                                        </li>
+                                        <li>
+                                            <p>Created package will be inserted to our database (i.e., vvpkg.bin and vvpkg.db)
+                                                in ~/.sciunit/package directory.</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex1_img3.jpg" alt="example_1_img_3"></li>
+                                        <li>
+                                            <p>Exit Sciunit-CLI:
+                                                <code>--stop</code></p>
                                             <!-- Insert image -->
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex1_img4.jpg" alt="example_1_img_4"></li>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex1_img4.jpg" alt="example_1_img_4"></li>
                                     </ol>
                                 </li>
                                 <li id="doc-tutorial-example2">
                                     <p><strong>Example 2: Package and repeat several applications</strong></p>
-                                    <p>Sciunit-CLI also allows users to create or repeat many packages of several applications. In this example, we present a scenario in which two different applications are packaged and repeated. We selected "helloworld" (located in /sciunit/examples) and FIE (available at: <a href="https://github.com/Chicago/food-inspections-evaluation">Github.com/Chicago/food-inspections-evaluation</a>) applications in this example.
+                                    <p>Sciunit-CLI also allows users to create or repeat many packages of several applications.
+                                        In this example, we present a scenario in which two different applications are packaged
+                                        and repeated. We selected "helloworld" (located in /sciunit/examples) and FIE (available
+                                        at: <a href="https://github.com/Chicago/food-inspections-evaluation">Github.com/Chicago/food-inspections-evaluation</a>)
+                                        applications in this example.
                                     </p>
                                     <ol>
-                                        <li><p>Start Sciunit-CLI
-                                            <code>$ sciunit-cli.py</code></p>
+                                        <li>
+                                            <p>Start Sciunit-CLI
+                                                <code>$ sciunit-cli.py</code></p>
                                         </li>
-                                        <li><p>Start a sciunit:
-                                            <code>--sciunit start &lt;"sciunit_name"&gt;</code></p>
+                                        <li>
+                                            <p>Start a sciunit:
+                                                <code>--sciunit start &lt;"sciunit_name"&gt;</code></p>
                                         </li>
-                                        <li><p>Change the working directory to the application's directory:
-                                            <code>$ cd /PATH/TO/app_directory</code></p>
+                                        <li>
+                                            <p>Change the working directory to the application's directory:
+                                                <code>$ cd /PATH/TO/app_directory</code></p>
                                         </li>
-                                        <li><p>Run and create a package in the current sciunit:
-                                            <code>--package &lt;/PATH/TO/execution_file&gt;</code></p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex2_img1.jpg" alt="example_2_img_1"></li>
-                                        <li><p>Change to another application's directory:
-                                            <code>$ cd /PATH/TO/app_directory</code></p>
+                                        <li>
+                                            <p>Run and create a package in the current sciunit:
+                                                <code>--package &lt;/PATH/TO/execution_file&gt;</code></p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex2_img1.jpg" alt="example_2_img_1"></li>
+                                        <li>
+                                            <p>Change to another application's directory:
+                                                <code>$ cd /PATH/TO/app_directory</code></p>
                                         </li>
-                                        <li><p>Run and create a package for this application:
-                                            <code>--package &lt;/PATH/TO/execution_file&gt;</code></p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex2_img2.jpg" alt="example_2_img_2"></li>
-                                        <li><p>List all the packages created in the current sciunit:
-                                            <code>--package list</code></p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex2_img3.jpg" alt="example_2_img_3"> 
-                                            <p>There are two packages listed in the current sciunit (Mysciunit) together with information such as: sicunit ID, package name, package ID, creation time and running command.</p></li>
-                                        <li><p>Repeat a package:
-                                            <code>--repeat &lt;package_id&gt;</code></p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex2_img4.jpg" alt="example_2_img_4"></li>
-                                        <li><p>Repeat another package:
-                                            <code>--repeat &lt;package_id&gt;</code></p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex2_img5.jpg" alt="example_2_img_5">
+                                        <li>
+                                            <p>Run and create a package for this application:
+                                                <code>--package &lt;/PATH/TO/execution_file&gt;</code></p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex2_img2.jpg" alt="example_2_img_2"></li>
+                                        <li>
+                                            <p>List all the packages created in the current sciunit:
+                                                <code>--package list</code></p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex2_img3.jpg" alt="example_2_img_3">
+                                            <p>There are two packages listed in the current sciunit (Mysciunit) together with
+                                                information such as: sicunit ID, package name, package ID, creation time
+                                                and running command.</p>
+                                        </li>
+                                        <li>
+                                            <p>Repeat a package:
+                                                <code>--repeat &lt;package_id&gt;</code></p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex2_img4.jpg" alt="example_2_img_4"></li>
+                                        <li>
+                                            <p>Repeat another package:
+                                                <code>--repeat &lt;package_id&gt;</code></p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex2_img5.jpg" alt="example_2_img_5">
                                             <p>
-                                                Before repeating an application, the package of this application associated by an unique package_id will be extracted from our database. In this example, two packages named e31fe107e64f21d4cc6da380913301194f1a2a47 and f5a8e5a27a62e544a3cb52d12f9f3- 066f37049dd are shown in the following figure
+                                                Before repeating an application, the package of this application associated by an unique package_id will be extracted from
+                                                our database. In this example, two packages named e31fe107e64f21d4cc6da380913301194f1a2a47
+                                                and f5a8e5a27a62e544a3cb52d12f9f3- 066f37049dd are shown in the following
+                                                figure
                                             </p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex2_img6.jpg" alt="example_2_img_6"></li>
-                                        <li><p>Exit Sciunit-CLI:
-                                            <code>--stop</code></p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex2_img7.jpg" alt="example_2_img_7"></li>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex2_img6.jpg" alt="example_2_img_6"></li>
+                                        <li>
+                                            <p>Exit Sciunit-CLI:
+                                                <code>--stop</code></p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex2_img7.jpg" alt="example_2_img_7"></li>
                                     </ol>
                                 </li>
                                 <li id="doc-tutorial-example3">
                                     <p><strong>Example 3: Add annotation to sciunit</strong></p>
                                     <p>In this example, we show how users can add annotations to their sciunits.</p>
                                     <ol>
-                                        <li><p>Start Sciunit-CLI:
-                                            <code>$ sciunit-cli.py</code></p>
+                                        <li>
+                                            <p>Start Sciunit-CLI:
+                                                <code>$ sciunit-cli.py</code></p>
                                         </li>
-                                        <li><p>Start a sciunit:
-                                            <code>--sciunit start &lt;sciunit_name&gt;</code></p>
+                                        <li>
+                                            <p>Start a sciunit:
+                                                <code>--sciunit start &lt;sciunit_name&gt;</code></p>
                                         </li>
-                                        <li><p>Add annotation by using command:
-                                            <code>--annotate property:&lt;value_with_no_spaces | "value with spaces"&gt;</code></p>
+                                        <li>
+                                            <p>Add annotation by using command:
+                                                <code>--annotate property:&lt;value_with_no_spaces | "value with spaces"&gt;</code></p>
                                         </li>
-                                        <li><p>If this is the first time of annotating:</p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex3_img1.jpg" alt="example_3_img_1"></li>
-                                        <li><p>If the annotation definition already exists, select "Y" to overwrite or "N" to not annotate: </p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex3_img2.jpg" alt="example_3_img_2"></li>
-                                        <li><p>Exit Sciunit-CLI</p>
-                                            <img class="img-fluid"src="/static/assets/images/tutorial_ex2_img3.jpg" alt="example_3_img_3"></li>
+                                        <li>
+                                            <p>If this is the first time of annotating:</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex3_img1.jpg" alt="example_3_img_1"></li>
+                                        <li>
+                                            <p>If the annotation definition already exists, select "Y" to overwrite or "N" to
+                                                not annotate: </p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex3_img2.jpg" alt="example_3_img_2"></li>
+                                        <li>
+                                            <p>Exit Sciunit-CLI</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex2_img3.jpg" alt="example_3_img_3"></li>
                                     </ol>
                                 </li>
                                 <li id="doc-tutorial-example4">
                                     <p><strong>Example 4: Publish a sciunit package to Hydroshare</strong></p>
                                     <p>
-                                        Sciunit-CLI allows users to publish their sciunit packages to Hydroshare which is an online collaborative environment for sharing data (follow <a href="http://www.hydroshare.org">www.hydroshare.org</a> more details). Once having Hydroshare accounts, users can easily create and publish their packages to Hydroshare. We will present an example of creating and publishing a "helloworld" package to Hydroshare.
+                                        Sciunit-CLI allows users to publish their sciunit packages to Hydroshare which is an online collaborative environment for
+                                        sharing data (follow <a href="http://www.hydroshare.org">www.hydroshare.org</a>                                        more details). Once having Hydroshare accounts, users can easily create and publish
+                                        their packages to Hydroshare. We will present an example of creating and publishing
+                                        a "helloworld" package to Hydroshare.
                                     </p>
                                     <ol>
-                                        <li><p>Start Sciunit-CLI:
-                                            <code>$ sciunit-cli.py</code></p>
+                                        <li>
+                                            <p>Start Sciunit-CLI:
+                                                <code>$ sciunit-cli.py</code></p>
                                         </li>
-                                        <li><p>Start a sciunit:
-                                            <code>--sciunit start &lt;sciunit_name&gt;</code></p>
+                                        <li>
+                                            <p>Start a sciunit:
+                                                <code>--sciunit start &lt;sciunit_name&gt;</code></p>
                                         </li>
-                                        <li><p>List all packages in this sciunit:
-                                            <code>--package list</code></p>
+                                        <li>
+                                            <p>List all packages in this sciunit:
+                                                <code>--package list</code></p>
                                         </li>
-                                        <li><p>Publish "helloworld" package:
-                                            <code>--publish &lt;package_id&gt;</code></p>
-                                        
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex4_img1.jpg" alt="example_4_img_1">
-                                        <p>
-                                            In this example, we assume that the "helloworld" package already exists. Users can follow "Example 1" or "running Helloworld with Sciunit-CLI" presented in the previous parts to create a "helloworld" package, if it doesn't exist.
-                                        </p></li>
-                                        <li><p>
-                                            If this is the first time using publish comment, the Hydroshare configuration will be launched. Otherwise Sciunit-CLI will reach to step 8.</p>
+                                        <li>
+                                            <p>Publish "helloworld" package:
+                                                <code>--publish &lt;package_id&gt;</code></p>
+
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex4_img1.jpg" alt="example_4_img_1">
+                                            <p>
+                                                In this example, we assume that the "helloworld" package already exists. Users can follow "Example 1" or "running Helloworld
+                                                with Sciunit-CLI" presented in the previous parts to create a "helloworld"
+                                                package, if it doesn't exist.
+                                            </p>
                                         </li>
-                                        <li><p>Type Hydroshare account information</p>
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex4_img2.jpg" alt="example_4_img_2"></li>
-                                        <li><p>All the Hydroshare authentication information will be recorded in ~/.sciunit directory so that in the later times, no configuration information will be asked.</p></li>
-                                        <li><p>Enter abstract of the package.</p>
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex4_img3.jpg" alt="example_4_img_3"></li>
-                                        <li><p>Enter title of the package.</p>
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex4_img4.jpg" alt="example_4_img_4"></li>
-                                        <li><p>Enter the keywords of the package (split with comma)</p>
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex4_img5.jpg" alt="example_4_img_5"></li>
-                                        <li><p>Select "y" to share this package to everyone in Hydroshare, or "n" to put this package in the private mode in Hydroshare.</p>
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex4_img6.jpg" alt="example_4_img_6"></li>
-                                        <li><p>A package named HelloWorld will be created in Hydroshare's website</p>
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex4_img7.jpg" alt="example_4_img_7"></li>
-                                        <li><p>Exit Sciunit-CLI</p>
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex4_img8.jpg" alt="example_4_img_8"></li>
+                                        <li>
+                                            <p>
+                                                If this is the first time using publish comment, the Hydroshare configuration will be launched. Otherwise Sciunit-CLI will
+                                                reach to step 8.</p>
+                                        </li>
+                                        <li>
+                                            <p>Type Hydroshare account information</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex4_img2.jpg" alt="example_4_img_2"></li>
+                                        <li>
+                                            <p>All the Hydroshare authentication information will be recorded in ~/.sciunit
+                                                directory so that in the later times, no configuration information will be
+                                                asked.</p>
+                                        </li>
+                                        <li>
+                                            <p>Enter abstract of the package.</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex4_img3.jpg" alt="example_4_img_3"></li>
+                                        <li>
+                                            <p>Enter title of the package.</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex4_img4.jpg" alt="example_4_img_4"></li>
+                                        <li>
+                                            <p>Enter the keywords of the package (split with comma)</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex4_img5.jpg" alt="example_4_img_5"></li>
+                                        <li>
+                                            <p>Select "y" to share this package to everyone in Hydroshare, or "n" to put this
+                                                package in the private mode in Hydroshare.</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex4_img6.jpg" alt="example_4_img_6"></li>
+                                        <li>
+                                            <p>A package named HelloWorld will be created in Hydroshare's website</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex4_img7.jpg" alt="example_4_img_7"></li>
+                                        <li>
+                                            <p>Exit Sciunit-CLI</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex4_img8.jpg" alt="example_4_img_8"></li>
                                     </ol>
                                 </li>
                                 <li id="doc-tutorial-example5">
                                     <p><strong>Example 5: Repeat a sciunit package from Hydroshare</strong></p>
-                                    <p>In the example 4, publishing a package to Hydroshare is presented. Furthermore, our platform also supports users to run their packages published in Hydroshare by using our server component. In this example, we show how to repeat a "HelloWorld" package published in Hydroshare.</p>
+                                    <p>In the example 4, publishing a package to Hydroshare is presented. Furthermore, our platform
+                                        also supports users to run their packages published in Hydroshare by using our server
+                                        component. In this example, we show how to repeat a "HelloWorld" package published
+                                        in Hydroshare.</p>
                                     <ol>
-                                        <li><p>Publish a sciunit package to Hydroshare following Example 4</p></li>
-                                        <li><p>Got to Hydroshare's website: <a href="http://www.hydroshare.org">hydroshare.org</a></p></li>
-                                        <li><p>Login to your Hydroshare account</p></li>
-                                        <li><p>In your Hydroshare's page, select "MY RESOURCES"
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex5_img1.jpg" alt="example_5_img_1"></p></li>
-                                        <li><p>Process in the package(i.e, HelloWorld)</p>
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex5_img2.jpg" alt="example_5_img_2"></li>
-                                        <li><p>In the top-right corner, select "Open With", then "Geotrust Server"</p>
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex5_img3.jpg" alt="example_5_img_3"></li>
-                                        <li><p>The package will be downloaded to our R-Server before executing it. The output is shown as follows.</p>
-                                        <img class="img-fluid"src="/static/assets/images/tutorial_ex5_img4.jpg" alt="example_5_img_4"></li>
+                                        <li>
+                                            <p>Publish a sciunit package to Hydroshare following Example 4</p>
+                                        </li>
+                                        <li>
+                                            <p>Got to Hydroshare's website: <a href="http://www.hydroshare.org">hydroshare.org</a></p>
+                                        </li>
+                                        <li>
+                                            <p>Login to your Hydroshare account</p>
+                                        </li>
+                                        <li>
+                                            <p>In your Hydroshare's page, select "MY RESOURCES"
+                                                <img class="img-fluid" src="/static/assets/images/tutorial_ex5_img1.jpg" alt="example_5_img_1"></p>
+                                        </li>
+                                        <li>
+                                            <p>Process in the package(i.e, HelloWorld)</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex5_img2.jpg" alt="example_5_img_2"></li>
+                                        <li>
+                                            <p>In the top-right corner, select "Open With", then "Geotrust Server"</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex5_img3.jpg" alt="example_5_img_3"></li>
+                                        <li>
+                                            <p>The package will be downloaded to our R-Server before executing it. The output
+                                                is shown as follows.</p>
+                                            <img class="img-fluid" src="/static/assets/images/tutorial_ex5_img4.jpg" alt="example_5_img_4"></li>
                                     </ol>
                                 </li>
                                 <li>
-                                    <strong>Example 6: Share a sciunit package to our R-server</strong> <p>This example (i.e., function push) is currently unavailable due to the changes of globus data transfer protocol. We will update this example as soon as possible.</p>
+                                    <strong>Example 6: Share a sciunit package to our R-server</strong>
+                                    <p>This example (i.e., function push) is currently unavailable due to the changes of globus
+                                        data transfer protocol. We will update this example as soon as possible.</p>
                                 </li>
                             </ol>
                         </div>
@@ -383,11 +507,12 @@
                             <p><strong>Known Errors:</strong></p>
                             <ol>
                                 <li>
-                                    <p>Problem: Setup script exited with error in docker-py setup command: Invalid environment marker: python_version
-                                        &lt;"3.5"</p>
-                                            <p>Solution:
-                                                <code>$ pip install setuptools --upgrade</code>
-                                            </p>
+                                    <p>Problem: Setup script exited with error in docker-py setup command: Invalid environment
+                                        marker: python_version &lt;"3.5"
+                                    </p>
+                                    <p>Solution:
+                                        <code>$ pip install setuptools --upgrade</code>
+                                    </p>
                                 </li>
                                 <li>
                                     <p>Problem: ssl.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)</p>
@@ -427,7 +552,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
     <br>
     <footer class="footer">
@@ -435,17 +560,24 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 col-md-12">
                     <div class="navbar-fixed-bottom d-flex flex-row flex-wrap justify-content-between">
-                            <a class="p-2" href="/">Home</a>                       
-                            <a class="p-2" href="/download/">Download</a>                       
-                            <a class="p-2" href="#">Documentation</a>
-                            <a class="p-2" href="/papers/">Papers</a>                        
-                            <a class="p-2" href="/support/">Support</a>  
+                        <a class="p-2" href="/">Home</a>
+                        <a class="p-2" href="/download/">Download</a>
+                        <a class="p-2" href="#">Documentation</a>
+                        <a class="p-2" href="/papers/">Papers</a>
+                        <a class="p-2" href="/support/">Support</a>
                     </div>
                     <p> The Geotrust Project is supported by the National Science Foundation.</p>
                 </div>
             </div>
         </div>
-     </footer>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
 </body>
+<script src="/static/js/app.js"></script>
 
 </html>

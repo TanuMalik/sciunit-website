@@ -457,6 +457,7 @@ template {
 html{
   
   position: relative;
+  height: auto;
   min-height: 100%;
   /*Scale font-size so 1.0 rem = 10 px to ensure compatible with all browsers  */
   font-size: 62.5%;

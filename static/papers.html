@@ -9,10 +9,7 @@
     <!-- Link to Bootstrap usind CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/css/normalize.css">
@@ -20,7 +17,7 @@
 </head>
 
 <body>
-   <nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
+    <nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,13 +27,13 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                 <li class='nav-item '>
+                <li class='nav-item '>
                     <a class="nav-link" href="/">Sciunit</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/download/">Download </a>
                 </li>
-                <li class="nav-item" >
+                <li class="nav-item">
                     <a class="nav-link" href="/docs/">Documentation </a>
                 </li>
                 <li class="nav-item active-nav">
@@ -51,7 +48,7 @@
     <hr />
     <div class="container-fluid">
         <div class="row">
-	    <nav class="col-lg-2" id=myScrollspy>
+            <nav class="col-lg-2" id=myScrollspy>
                 <ul class="nav nav-pills flex-column" data-spy="affix" data-offset-top="205" id="stickyContents">
                     <li><a href="#research">Research Papers</a></li>
                     <li><a href="#application">Application Papers</a></li>
@@ -64,16 +61,17 @@
                     <h2 class="page-title">Papers</h2>
                     <hr />
                 </div>
-		 <ol>
+                <ol>
                     <li>
                         <!-- Paper #1-->
                         <p>PROVaaS: Provenance-as-a-Service. In Theory and Practice of Provenance (TaPP) (poster)<span class='date'> 2014</span>                            [<a href="http://dbgroup.cdm.depaul.edu/~tanu/SciDataspace/SciDataspace.html">PDF</a>]</p>
                     </li>
                     <li>
                         <!--Paper #2-->
-                        <p>H. Meng, R. Kommineni, Q. Pham, R. Gardner, T. Malik, and D. Thain. <em>An Invariant Framework for Conducting Reproducible Computational Science.</em>                            In Journal of Computational Science, Elsevier,<span class="date"> 2015. </span><strong>Invited</strong>                            
-                            [<a href="https://www.academia.edu/15629769/An_Invariant_Framework_for_Conducting_Reproducible_Computational_Science">PDF</a>],
-                            [<a href="https://sites.google.com/site/invariantcompatlas/">Software</a>]
+                        <p>H. Meng, R. Kommineni, Q. Pham, R. Gardner, T. Malik, and D. Thain. <em>An Invariant Framework for Conducting Reproducible Computational Science.</em>                            In Journal of Computational Science, Elsevier,<span class="date"> 2015. </span><strong>Invited</strong>                            [
+                            <a href="https://www.academia.edu/15629769/An_Invariant_Framework_for_Conducting_Reproducible_Computational_Science">PDF</a>],
+                            [
+                            <a href="https://sites.google.com/site/invariantcompatlas/">Software</a>]
                         </p>
                         <p class='paper-abstract'>
                             Computational reproducibility depends on the ability to not only isolate necessary and sufficient computational artifacts
@@ -112,8 +110,10 @@
                         <p>Q. Pham, S. Thaler, T. Malik, B. Glavic, I. Foster. Light-weight Database Virtualization. In IEEE
                             International Conference on Data Engineering (ICDE),<span class="date"> 2015. </span> [
                             <a href="https://www.academia.edu/15628762/LDV_Light-weight_Database_Virtualization" target="_blank">PDF</a>],
-                            [<a href="http://www.slideshare.net/TanuMalik/ldv-lightweight-database-virtualization" target="_blank">PPT</a>],
-                            [<a href="https://github.com/legendOfZelda/LDV" target="_blank">Software</a>]
+                            [
+                            <a href="http://www.slideshare.net/TanuMalik/ldv-lightweight-database-virtualization" target="_blank">PPT</a>],
+                            [
+                            <a href="https://github.com/legendOfZelda/LDV" target="_blank">Software</a>]
                         </p>
                         <p class='paper-abstract'>
                             We present a light-weight database virtualization (LDV) system that allows users to share and re-execute applications that
@@ -137,7 +137,8 @@
                         <p>Q. Pham, T. Malik, I. Foster. SOLE: Towards Descriptive and Interactive Publications. In Implementing
                             Reproducible Research, Editor: Victoria Stodden, et. al, CRC Press,<span class="date"> 2014.</span>                            [
                             <a href="https://www.academia.edu/17347896/SOLE_Towards_Descriptive_and_Interactive_Publications" target="_blank">PDF</a>],
-                            [<a href="https://gitlab.com/quanpt/sole-pdf-reader.git">Software</a>]
+                            [
+                            <a href="https://gitlab.com/quanpt/sole-pdf-reader.git">Software</a>]
                         </p>
                         <p class="paper-abstract">
                             Prior to the computational-driven revolution in science, research papers provided the pri-mary mechanism for sharing novel
@@ -335,6 +336,14 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
