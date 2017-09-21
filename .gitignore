@@ -1,0 +1,7 @@
+venv/
+*.pyc
+*.db
+*.jpg
+/dist/
+/*.egg-info
+/*.egg
