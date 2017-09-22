@@ -5,3 +5,7 @@ venv/
 /dist/
 /*.egg-info
 /*.egg
+/dist
+/build
+dev/
+files.txt
