@@ -14,4 +14,5 @@ setup(name='sciunit_webpage_oauth',
           'flask_mail',
           'gevent'
       ],
+      include_package_data=True,
       zip_safe=False)
