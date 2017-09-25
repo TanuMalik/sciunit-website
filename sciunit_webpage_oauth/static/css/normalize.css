@@ -475,7 +475,10 @@ body {
   /* Set the fixed height of the footer here */
   height: auto;
   margin-top: -60px;
+  /* support background color for IE */
+  background: #2b4c81;
   background: var(--geotrust-main-color);
+  
   color: white;
   text-align: center;
   float: right;
@@ -498,7 +501,10 @@ h3{
 }
 
 #sciunit-title{
+	/*Support color for IE */
+  color: #2b4c81;
   color: var(--geotrust-main-color);
+  
   font-style: italic;
 }
 
@@ -539,6 +545,7 @@ code{
 }
 .navbar-brand h1{
   color: var(--geotrust-main-color);
+  color: #2b4c81;
   text-align: center;
   margin: 0;
 }
@@ -553,6 +560,9 @@ code{
   border-radius: 3px;
   min-width: 175px;
   background-color: var(--geotrust-main-color);
+  /*Support color for IE */
+  background-color: #2b4c81;
+
   -webkit-transition: all 0.2s ease-in-out;
   transition: all  0.2s ease-in-out;
 }
@@ -680,6 +690,7 @@ li.sub-list, #doc-tutorial>ol, #doc-config>ol{
 
 #sidescrollBar .nav-item{
  background-color: var(--geotrust-main-color);
+ background-color: #2b4c81;
 }
 
 #sidescrollBar .nav-item:hover{
@@ -693,6 +704,8 @@ li.sub-list, #doc-tutorial>ol, #doc-config>ol{
   height: auto;
   top: 10px;
   background: var(--geotrust-main-color);
+  /*Support color for IE */
+  background: #2b4c81;
   border-radius: 4px;
   
 }
