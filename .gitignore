@@ -4,8 +4,12 @@ venv/
 *.jpg
 /dist/
 /*.egg-info
+<<<<<<< HEAD
 /*.egg
 /dist
 /build
 dev/
 files.txt
+=======
+/*.egg
+>>>>>>> 040f276cb03f11a3c913a0089be7da5bcab5ec55
