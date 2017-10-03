@@ -10,9 +10,10 @@ setup(name='sciunit_webpage_oauth',
       license='MIT',
       packages=['sciunit_webpage_oauth'],
       install_requires=[
-          'flask',
+          'Flask',
           'flask_mail',
-          'gevent'
+          'gevent',
+          'gunicorn'
       ],
       include_package_data=True,
       zip_safe=False)
