@@ -99,7 +99,7 @@
                             <p>creates and opens an empty sciunit called “Project1”, where <code>~/sciunit/Project1</code> is
                                 its workspace. You can verify these with</p>
                             <pre><code>&gt; sciunit show
-                                sciunit: show: sciunit 'Project1' is empty
+sciunit: show: sciunit 'Project1' is empty
                                 </code></pre>
                             <p>You can switch among multiple workspaces with the <code>open</code> command,</p>
                             <pre><code>sciunit open Project2
@@ -109,35 +109,35 @@
                             <h2 id="capturing-and-testing-your-program">Capturing and testing your program</h2>
                             <p>Let’s start with a “Hello World” program in a shell script.</p>
                             <pre><code>&gt; cat hello.sh
-                                #!/bin/sh
-                                echo 'hello, world'
+#!/bin/sh
+echo 'hello, world'
                                 </code></pre>
                             <p>We can run this program</p>
                             <pre><code>&gt; ./hello.sh
-                                hello, world
+hello, world
                                 </code></pre>
                             <p>Now we try to capture this program with <code>sciunit</code>. Assume that we just created a new
                                 sciunit called “Project1”, then do</p>
                             <pre><code>&gt; sciunit exec ./hello.sh
-                                hello, world
+hello, world
                                 </code></pre>
                             <p>Now this program, along with its all dependencies, have been captured as “<code>e1</code>” in
                                 “Project1”. The “show” command can display the details of the last captured execution:</p>
                             <pre><code>&gt; sciunit show
-                                     id: e1
-                                sciunit: Project1
-                                command: ./hello.sh
-                                   size: 2.82 MB
-                                started: 2017-10-10 08:42
+id: e1
+sciunit: Project1
+command: ./hello.sh
+size: 2.82 MB
+started: 2017-10-10 08:42
                                 </code></pre>
                             <p>As we claimed, this execution can be repeated on a different machine. We will do so in the remaining
                                 chapters, but before that, we should test it locally:</p>
                             <pre><code>&gt; sciunit repeat e1
-                                hello, world
+hello, world
                                 </code></pre>
                             <p>If you investigate into the workspace</p>
                             <pre><code>&gt; ls ~/sciunit/Project1/
-                                cde-package  e1.json  sciunit.db  vvpkg.bin  vvpkg.db
+cde-package  e1.json  sciunit.db  vvpkg.bin  vvpkg.dbThere is an available update.
                                 </code></pre>
                             <p>, you will find a directory named “cde-package” and a few other files. The “cde-package” is a
                                 temporary directory which consists all necessary files required for this execution to repeat;
@@ -145,25 +145,25 @@
                                 the files are the underlying implementation for the conceptual “sciunit”.</p>
                             <p>Now let’s try a different way to capture executions – capture as you go.</p>
                             <pre><code>&gt; sciunit exec -i
-                                Interactive capturing started; press Ctrl-D to end
-                                &gt;
+Interactive capturing started; press Ctrl-D to end
+&gt;
                                 </code></pre>
                             <p>Wait, that’s it? No, you are merely inside a subshell, so that all the commands you run from
                                 now on will be captured before exiting. For example,</p>
                             <pre><code>&gt; echo 'hello'
-                                hello
-                                &gt; ./hello.sh
-                                hello, world
+hello
+&gt; ./hello.sh
+hello, world
                                 </code></pre>
                             <p>Now press “Ctrl-D”,</p>
                             <pre><code>&gt; exit
-                                Interactive capturing ended
+Interactive capturing ended
                                 </code></pre>
                             <p>These all become execution “<code>e2</code>”, and you can repeat it as well.</p>
                             <p>So far, we obtained 2 executions within the sciunit. You can list them with the <code>list</code>command,</p>
                             <pre><code>&gt; sciunit list
-                                   e1 Oct 10 08:42 ./hello.sh
-                                   e2 Oct 10 11:00
+e1 Oct 10 08:42 ./hello.sh
+e2 Oct 10 11:00
                                 </code></pre>
                             <p>, or remove one of them with the <code>rm</code> command. Note that after a removal all the remaining
                                 executions retain their current execution ids, and new executions will be assigned ids which
@@ -173,7 +173,7 @@
                                 your sciunit in another environment, or maybe share it with a coauthor. Conceptually, you
                                 want to copy &amp; paste, remotely. The easiest way is to use the <code>copy</code> command:</p>
                             <pre><code>&gt; sciunit copy
-                                mSLLTj#
+mSLLTj#
                                 </code></pre>
                             <p>Give it a second, and it returns a code. You can then “paste” the sciunit over the Internet by
                                 running</p>
@@ -184,7 +184,7 @@
                             <p>If you investigate the <code>~/sciunit</code> directory on the machine which you initiated the
                                 copy,</p>
                             <pre><code>&gt; ls ~/sciunit
-                                Project1  Project1.zip
+Project1  Project1.zip
                                 </code></pre>
                             <p>you will find a new zip file. Easy to imagine, it is a zipped version of the sciunit “Project1”.
                                 The <code>open</code> command can also open a zipped sciunit. So if you do not want to use
@@ -206,16 +206,16 @@
                                 <p>The above command prompts you for</p>
                                 <pre><code>Please go to the following link and authorize access:
                                 
-                                https://www.hydroshare.org/o/authorize/?response_type=code&amp;client_id=vG5R4zZFO6uJZBj3m0DWtUK6Va44jTQ4KoqtaLpn&amp;redirect_uri=https:%2F%2Fsciunit.run%2Fcb&amp;state=RCeAb6zxbEuw6yHQPDpWu26iHQIcan
+https://www.hydroshare.org/o/authorize/?response_type=code&amp;client_id=vG5R4zZFO6uJZBj3m0DWtUK6Va44jTQ4KoqtaLpn&amp;redirect_uri=https:%2F%2Fsciunit.run%2Fcb&amp;state=RCeAb6zxbEuw6yHQPDpWu26iHQIcan
                                 
-                                Paste the authorization code:
+Paste the authorization code:
                                 </code></pre>
                                 <p>Here we are running OAuth2 flow for HydroShare. After you done authentication in a web browser
                                     and pasted in the auth code,</p>
                                 <pre><code>Paste the authorization code: AoxTbXnjzTfIa3OP5d5unxImPn0Noc
-                                Logged in as "Username &lt;user@email.com&gt;"
-                                Title for the new article: New Article for Project1
-                                new: 8.93MB [00:01, 4.72MB/s]
+Logged in as "Username &lt;user@email.com&gt;"
+Title for the new article: New Article for Project1
+new: 8.93MB [00:01, 4.72MB/s]
                                 </code></pre>
                                 <p>input the title for the article and wait for the upload to finish. Now you can go to <a href="https://www.hydroshare.org/my-resources/"
                                         target="_blank">https://www.hydroshare.org/my-resources/</a> to view your new article
@@ -227,8 +227,8 @@
                                     a new execution, the above command can silently keep your article on HydroShare up-to-date.
                                     However, if you run</p>
                                 <pre><code>&gt; sciunit push new --setup hs
-                                Logged in as "Username &lt;user@email.com&gt;"
-                                Create a new version of the article "New Article for Project1"? [y/N]
+Logged in as "Username &lt;user@email.com&gt;"
+Create a new version of the article "New Article for Project1"? [y/N]
                                 </code></pre>
                                 <p>again, you are creating another new article rather than updating the existing one. If you
                                     answer ‘<code>y</code>’, the article will be a new “version” (HydroShare feature) of
