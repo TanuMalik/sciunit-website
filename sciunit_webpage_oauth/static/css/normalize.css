@@ -819,6 +819,8 @@ pre{
   padding: 3px 8px;
   overflow-x: auto;
   background-color: #f6f6f6;
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 pre > code{
