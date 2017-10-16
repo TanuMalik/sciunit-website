@@ -18,9 +18,9 @@ def homepage():
     return app.send_static_file('index.html')
 
 
-@app.route('/download/')
+@app.route('/install/')
 def downloadpage():
-    return app.send_static_file('download.html')
+    return app.send_static_file('install.html')
 
 
 @app.route('/docs/')
