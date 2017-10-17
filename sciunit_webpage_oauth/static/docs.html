@@ -137,7 +137,7 @@ hello, world
                                 </code></pre>
                             <p>If you investigate into the workspace</p>
                             <pre><code>&gt; ls ~/sciunit/Project1/
-cde-package  e1.json  sciunit.db  vvpkg.bin  vvpkg.dbThere is an available update.
+cde-package  e1.json  sciunit.db  vvpkg.bin  vvpkg.db
                                 </code></pre>
                             <p>, you will find a directory named “cde-package” and a few other files. The “cde-package” is a
                                 temporary directory which consists all necessary files required for this execution to repeat;
@@ -162,8 +162,8 @@ Interactive capturing ended
                             <p>These all become execution “<code>e2</code>”, and you can repeat it as well.</p>
                             <p>So far, we obtained 2 executions within the sciunit. You can list them with the <code>list</code>command,</p>
                             <pre><code>&gt; sciunit list
-e1 Oct 10 08:42 ./hello.sh
-e2 Oct 10 11:00
+   e1 Oct 10 08:42 ./hello.sh
+   e2 Oct 10 11:00
                                 </code></pre>
                             <p>, or remove one of them with the <code>rm</code> command. Note that after a removal all the remaining
                                 executions retain their current execution ids, and new executions will be assigned ids which
