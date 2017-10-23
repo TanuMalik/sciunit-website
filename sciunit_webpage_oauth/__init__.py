@@ -1,5 +1,6 @@
-from flask import Flask, url_for, request, render_template, abort
+from flask import Flask, url_for, request, render_template, abort,make_response
 from flask_mail import Mail, Message
+from zlib import adler32
 import os
 
 
@@ -11,26 +12,48 @@ app.config['MAIL_PORT'] = 2525
 app.config['MAIL_USERNAME'] = '93eb3942ae0e1f'
 app.config['MAIL_PASSWORD'] = '65e58901acaab7'
 mail = Mail(app)
+pages = []
 
+for filename in os.listdir("./templates"):
+    if filename != 'base.html':
+        pages.append(filename)
+    
+    print(pages)
+
+
+def templateof(pagename='index'):
+    filename = pagename + '.html'
+    if filename == 'cb.html':
+        response = make_response(render_template(filename, code=request.args.get('code')))
+    else:
+        response = make_response(render_template(filename))
+    response.set_etag(etag_for(os.path.join('templates', filename)))
+    response.headers['Expires'] = 'Thu, 14 Jan 2018 00:00:00 GMT'
+    return response
+
+def etag_for(filename):
+    st = os.stat(filename)
+    return 'flask-%s-%s-%s' % (st.st_mtime, st.st_size, 
+            adler32(os.path.abspath(filename)) & 0xffffffff)
 
 @app.route("/")
 def homepage():
-    return app.send_static_file('index.html')
+    return templateof()
 
 
 @app.route('/install/')
 def downloadpage():
-    return app.send_static_file('install.html')
+    return templateof('install')
 
 
 @app.route('/docs/')
 def docspage():
-    return app.send_static_file('docs.html')
+    return templateof('docs')
 
 
 @app.route('/papers/')
 def paperspage():
-    return app.send_static_file('papers.html')
+    return templateof('papers')
 
 
 @app.route('/support/', methods=['GET', 'POST'])
@@ -47,11 +70,10 @@ def supportpage():
             body=message,
             reply_to=user_email)
         mail.send(email_msg)
-    return app.send_static_file('support.html')
+    return templateof('support')
 
 
 @app.route('/cb')
 def default_home():
     """ Render the authorization code for user"""
-    code = request.args.get('code')
-    return render_template('oauth.html', code=code)
+    return templateof('cb')
