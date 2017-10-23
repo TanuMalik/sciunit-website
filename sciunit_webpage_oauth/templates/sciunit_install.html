@@ -1,0 +1,87 @@
+<h1>Sciunit</h1>
+<p><strong>sciunit</strong> is a command-line tool that answers the call for a reusable research object that containerizes and
+    stores applications simply and efficiently, facilitates sharing and collaboration, and eases the task of executing, understanding,
+    and building on shared work.</p>
+<section id="installing">
+    <h2>Installing</h2>
+    <p><em>[ Note</em> This section introduces the binary distributions of sciunit. <em>--end note ]</em></p>
+    <p>Requires: pip&gt;=8.1.1, glibc&gt;=2.17, python2.7 with headers and compiler</p>
+    <p>Platform: amd64-pc-linux-gnu</p>
+    <p>Ensure that <cite>~/.local/bin</cite> is in your <code>PATH</code> environment variable, and then, run</p>
+    <pre>pip install --user sciunit2</pre>
+    <p>Add <code>--upgrade</code> to the command line arguments to upgrade an existing sciunit installation.</p>
+    <p>Verify the installation with</p>
+    <pre>sciunit --version</pre>
+    <p>In the following per-distro instructions, if you see a command-line in the form of</p>
+    <pre>export PATH=~/.local/bin:$PATH</pre>
+    <p>, it merely means that you will need the aforementioned binary path in <code>PATH</code> before proceeding; normally
+        you should adjust it according to your login shell and write it to a shell configuration such as <cite>~/.profile</cite>.</p>
+    <section id="ubuntu-16-04">
+        <h3>Ubuntu 16.04</h3>
+        <pre>sudo apt update
+sudo apt install python-dev python-pip
+pip install --user sciunit2</pre>
+    </section>
+    <section id="ubuntu-14-04">
+        <h3>Ubuntu 14.04</h3>
+        <pre>sudo apt update
+sudo apt install python-dev python-pip
+pip install --user -U pip
+export PATH=~/.local/bin:$PATH
+pip install --user sciunit2</pre>
+    </section>
+    <section id="arch-linux">
+        <h3>Arch Linux</h3>
+        <pre>sudo pacman -S python2-pip
+export PATH=~/.local/bin:$PATH
+pip2 install --user sciunit2</pre>
+    </section>
+    <section id="fedora-26">
+        <h3>Fedora 26</h3>
+        <pre>sudo dnf install python2-pip python2-devel gcc redhat-rpm-config
+pip install --user sciunit2</pre>
+    </section>
+    <section id="centos-7">
+        <h3>CentOS 7</h3>
+        <pre>sudo yum install -y epel-release
+sudo yum install python2-pip python-devel gcc
+pip install --user sciunit2</pre>
+    </section>
+    <section id="rhel-7">
+        <h3>RHEL 7</h3>
+        <pre>sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install python2-pip python-devel gcc
+pip install --user sciunit2</pre>
+    </section>
+    <section id="debian-9">
+        <h3>Debian 9</h3>
+        <pre>sudo apt update
+sudo apt install python-dev python-pip
+export PATH=~/.local/bin:$PATH
+pip install --user sciunit2</pre>
+    </section>
+    <section id="debian-8">
+        <h3>Debian 8</h3>
+        <pre>sudo apt update
+sudo apt install python-dev python-pip
+pip install --user -U pip
+export PATH=~/.local/bin:$PATH
+pip install --user sciunit2</pre>
+    </section>
+    <section id="opensuse-42">
+        <h3>OpenSUSE 42</h3>
+        <p>Note that OpenSUSE defaults user-binary path to <cite>~/bin</cite> rather than <cite>~/.local/bin</cite>, so you
+            may want to symlink one to the other.</p>
+        <pre>sudo zypper install python-pip python-devel gcc
+pip install --user -U pip
+export PATH=~/.local/bin:$PATH
+pip install --user sciunit2</pre>
+    </section>
+</section>
+<section id="using">
+    <h2>Using</h2>
+    <p>Checkout our <a href="#manual">tutorial</a> and <a href="docs/sciunit.1.rst">manpage</a>. The manpage is also
+        available as</p>
+    <pre>man sciunit</pre>
+    <p>after a successful installation.</p>
+</section>

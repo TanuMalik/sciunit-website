@@ -17,6 +17,13 @@
 
 </head>
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+{% extends "base.html" %}
+{% block title %} Support {% endblock %}
+{% block head %}
+ {{super()}}
+ <script src="/static/js/validation.js"></script>
+{% endblock %}
+{% block content %}
      <nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -82,3 +89,4 @@
         </div>
      </footer>
 </body>
+{% endblock %}

@@ -519,11 +519,15 @@ h3{
   margin-top: 20px;
 }
 
-p,li, samp, input, textarea{
+p,li, samp, input, textarea, dd, dt{
   font-size: 18px;
   font-size: 1.8rem;
   font-family: 'Work Sans', 'sans-serif';
   word-wrap: break-word;
+}
+
+dd{
+  padding-left: 2.55%;
 }
 
 strong{

@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>The Geotrust Project</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/jpg" href="/static/assets/images/new_geotrust_1lm_icon.ico" />
-    <!-- Link to Bootstrap usind CDN -->
-    <link href="https://fonts.googleapis.com/css?family=Lato|Work+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/static/css/normalize.css">
-
-</head>
-
-<body>
-    <nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -95,23 +75,5 @@
             </div>
         </div>
     </div>
-    <br>
-    <footer class="footer">
-        <div class="container ">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-md-12">
-                    <div class="navbar-fixed-bottom d-flex flex-row flex-wrap justify-content-between">
-                        <a class="p-2" href="#">Home</a>
-                        <a class="p-2" href="/install/">Install</a>
-                        <a class="p-2" href="/docs/">Documentation</a>
-                        <a class="p-2" href="/papers/">Papers</a>
-                        <a class="p-2" href="/support/">Support</a>
-                    </div>
-                    <p> The Geotrust Project is supported by the National Science Foundation.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
 
-</html>
+{% endblock %}

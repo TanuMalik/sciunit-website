@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Installation{% endblock %}
+{% block content %}
+<nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <a href="/" class="navbar-brand">
+        	<img src="/static/assets/images/new_GeoTrust.png" id="sciunit-logo" width="135" height="110" alt="Geotrust">
+        </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class='nav-item'>
+                <a class="nav-link" href="/">Sciunit</a>
+            </li>
+            <li class="nav-item active-nav">
+                <a class="nav-link" href="#">Install </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/docs/">Documentation </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/papers/">Papers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/support">Support</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <h2 class="page-title">Installation Guide</h2>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            {% include "sciunit_install.html" %}
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            {% include "sciunit_man.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}
