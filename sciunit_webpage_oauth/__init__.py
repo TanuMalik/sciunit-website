@@ -15,12 +15,6 @@ app.config['MAIL_PASSWORD'] = '65e58901acaab7'
 mail = Mail(app)
 pages = []
 
-for filename in os.listdir("./templates"):
-    if filename != 'base.html':
-        pages.append(filename)
-    
-    print(pages)
-
 
 def addEtagCaching(resp, filename):
     resp.set_etag(etag_for(os.path.join('templates', filename)))
