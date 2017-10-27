@@ -1,4 +1,8 @@
 {% extends "base.html" %} {% block title %} Papers {% endblock %} 
+{% block head %}
+ {{super()}}
+ <script src="/static/js/app.js"></script>
+{% endblock %}
 {% block content %}
 <nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -56,6 +60,7 @@
                         [
                         <a href="https://sites.google.com/site/invariantcompatlas/">Software</a>]
                     </p>
+                    <button class="btn btn-lg abstract-toggle">Abstract</button>
                     <p class='paper-abstract'>
                         Computational reproducibility depends on the ability to not only isolate necessary and sufficient computational artifacts
                         but also to preserve those artifacts for later re-execution. Both isolation and preservation present
@@ -97,6 +102,7 @@
                         [
                         <a href="https://github.com/legendOfZelda/LDV" target="_blank">Software</a>]
                     </p>
+                    <button class="btn btn-lg abstract-toggle">Abstract</button>
                     <p class='paper-abstract'>
                         We present a light-weight database virtualization (LDV) system that allows users to share and re-execute applications that
                         operate on a relational database (DB). Previous methods for sharing DB applications, such as companion
@@ -122,6 +128,7 @@
                         [
                         <a href="https://gitlab.com/quanpt/sole-pdf-reader.git">Software</a>]
                     </p>
+                    <button class="btn btn-lg abstract-toggle">Abstract</button>
                     <p class="paper-abstract">
                         Prior to the computational-driven revolution in science, research papers provided the pri-mary mechanism for sharing novel
                         methods and data. Papers described experiments involving small amount of data, derivations on that
@@ -155,6 +162,7 @@
                     [
                     <a href="https://gitlab.com/quanpt/provenance-to-use.git" target="_blank">Software</a>]
                     </p>
+                    <button class="btn btn-lg abstract-toggle">Abstract</button>
                     <p class="paper-abstract">
                         Science projects are increasingly investing in computational reproducibility. Constructing software pipelines to demonstrate
                         reproducibility is also becoming increasingly common. To aid the process of constructing pipelines,
@@ -178,6 +186,7 @@
                         In IEEE Cluster, <span class="date">2013.</span> [
                         <a href="https://www.academia.edu/17065820/Distributed_data_provenance_for_large-scale_data-intensive_computing" target="_blank">PDF</a>]
                     </p>
+                    <button class="btn btn-lg abstract-toggle">Abstract</button>
                     <p class="paper-abstract">
                         It has become increasingly important to capture and understand the origins and derivation of data (its provenance). A key
                         issue in evaluating the feasibility of data provenance is its performance, overheads, and scalability.
@@ -202,6 +211,7 @@
                         <a href="http://www.slideshare.net/TanuMalik/ptu-tapp13" target="_blank">PPT</a>], [
                         <a href="https://gitlab.com/quanpt/provenance-to-use.git" target="_blank">Software</a>]
                     </p>
+                    <button class="btn btn-lg abstract-toggle">Abstract</button>
                     <p class="paper-abstract">
                         We present Provenance-to-use (PTU), a tool that minimizes computation time during repeatability testing. Authors can use
                         PTU to build a package of their software program and include a provenance trace of an initial, reference
@@ -220,6 +230,7 @@
                         [
                         <a href="https://github.com/ashish-gehani/SPADE" target="_blank">Software</a>]
                     </p>
+                    <button class="btn btn-lg abstract-toggle">Abstract</button>
                     <p class="paper-abstract">Users can determine the precise origins of their data by collecting detailed provenance records. However,
                         auditing at a finer grain produces large amounts of metadata. To efficiently manage the collected
                         provenance, several provenance management systems, including SPADE, record provenance on the hosts
@@ -237,6 +248,7 @@
                         Symposium on Policies for Distributed Systems and Networks (POLICY), <span class="date">2011.</span>                        [
                         <a href="https://www.academia.edu/2678704/Policy-Based_Integration_of_Provenance_Metadata" target="_blank">PDF</a>]
                     </p>
+                    <button class="btn btn-lg abstract-toggle">Abstract</button>
                     <p class="paper-abstract">Reproducibility has been a cornerstone of the scientific method for hundreds of years. The range of sources
                         from which data now originates, the diversity of the individual manipulations performed, and the
                         complexity of the orchestrations of these operations all limit the reproducibility that a scientist
@@ -252,6 +264,7 @@
                         [
                         <a href="https://github.com/ashish-gehani/SPADE" target="_blank">Software</a>]
                     </p>
+                    <button class="btn btn-lg abstract-toggle">Abstract</button>
                     <p class="paper-abstract">Current provenance collection systems typically gather metadata on remote hosts and submit it to a central
                         server. In contrast, several data-intensive scientific applications require a decentralized architecture
                         in which each host maintains an authoritative local repository of the provenance metadata gathered

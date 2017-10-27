@@ -699,6 +699,7 @@ li.sub-list, #doc-tutorial>ol, #doc-config>ol{
   font-size: 1.2rem;
   font-size: 1.4rem;
   color: #8F8F8F;
+  display: none;
 }
 
 
