@@ -1,0 +1,18 @@
+{
+    "team" : [
+        ["Tanu Malik", "PI" ],
+        ["Zhihao Yuan", "Research Engineer"],
+        ["Dai Hai Ton That", "Postdoctoral Associate"],
+        ["Gabriel Fils", "Graduate Student"],
+        ["Siddanth Kothari", "Graduate Student"],
+        ["John Gorman", "Web Developer"],
+        ["Qili Sui", "Web Developer"]
+    ],
+    "alumni" : [
+        ["Sumanth Mannam", "Consultant"],
+        ["Danko Adrovic", "Research Engineer"],
+        ["Cristian Vlaescu", "Programmer"],
+        ["Rupa Kommineni", "MS"],
+        ["Quan Pham", "PhD"]
+    ]
+}
