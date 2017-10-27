@@ -534,6 +534,14 @@ strong{
   font-weight: 800;
 }
 
+li span{
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-style: italic;
+  display: block;
+  margin-left: 10%;
+}
+
 
 .console-output{
   margin-bottom: 10px;
