@@ -1,6 +1,6 @@
 <h1>A Brief Introduction to Sciunit</h1>
 <p>From time to time, you may find that it is hard to verify or reproduce someone else’s research, even though it is only programs, data, and output. Programs may be built in different ways, may behave differently if not running in the author’s environment, and can accept different arguments at runtime. All these factors contribute to the difficulties of trying out, if not reproducing, others work. How about, starting from your next paper, you publish the article along with a ‘sciunit’ research object to encapsulate all the workflows you plan to demonstrate, allowing your readers and reviewer to try out your work?</p>
-<h2>Basic concepts</h2>
+<h2 id="doc-Create">Basic concepts</h2>
 <h3>Sciunit</h3>
 <p>‘Sciunit’ is both the name of the reusable research object we defined and also the name of command-line tool that creates, manages, and shares <em>sciunits</em>.  A sciunit consists of multiple <em>executions</em>.  Each execution refers to an execution of a command under Linux.  The command may be a single binary, may start with the name of a specific virtual machine for managed languages, such as Java, or may be a shell script that contains multiple commands. An execution may also be a series of terminal inputs that capture your interaction with a UNIX shell. In all cases, the execution have its runtime dependencies determined during an <em>auditing</em> phase, saved to a sciunit, and can be <em>repeated</em> later on a different machine without pulling in any dependencies of the execution.</p>
 <p>Each execution is assigned an execution id, starting from <code>e1</code>.  In your paper, you describe each workflow you want to discuss and reference it using its corresponding execution id in a sciunit – just like referencing a figure using a numerical figure id.</p>
@@ -18,7 +18,7 @@ sciunit: show: sciunit <span class="hljs-string">'Project1'</span> is empty
 <p><code>sciunit open Project2</code></p>
 </blockquote>
 <p>You can also load a sciunit into a workspace and then open it.  The following chapters describe more forms of the <code>open</code> command.</p>
-<h2>Capturing and testing your program</h2>
+<h2 id="doc-Capture">Capturing and testing your program</h2>
 <p>Let’s start with a “Hello World” program in a shell script.</p>
 <pre class="hljs language-bash"><code>&gt; cat hello.sh
 <span class="hljs-meta">#!/bin/sh</span>
@@ -71,7 +71,7 @@ Interactive capturing ended
    e2 Oct 10 11:00
 </code></pre>
 <p>, or remove one of them with the <code>rm</code> command.  Note that after a removal all the remaining executions retain their current execution ids, and new executions will be assigned ids which are higher than the remaining ones.</p>
-<h2>Continue your work on another machine</h2>
+<h2 id="doc-Copy">Continue your work on another machine</h2>
 <p>While developing your paper, you might want to capture more executions on another machine, testing your sciunit in another environment, or maybe share the sciunit with a coauthor.  Conceptually, you want to copy &amp; paste, remotely.  The easiest way is to use the <code>copy</code> command:</p>
 <pre class="hljs language-bash"><code>&gt; sciunit copy
 mSLLTj<span class="hljs-comment">#</span>
@@ -86,7 +86,7 @@ mSLLTj<span class="hljs-comment">#</span>
 Project1  Project1.zip
 </code></pre>
 <p>you will find a new zip file.  As you can imagine, it is a zipped version of the sciunit “Project1.”  The <code>open</code> command can also open a zipped sciunit. So if you do not want to use <a href="https://file.io">file.io</a>, you can instead use the <code>sciunit copy -n</code> command to generate this file, and deliver the file to some other machine or to someone else.</p>
-<h2>Prepare your paper for review</h2>
+<h2 id="doc-Publish">Prepare your paper for review</h2>
 <p>The zip file mentioned above is the research object you are going to publish along with your paper.  You can manually select and upload such a file on websites that host sharing of research objects, however, if you are using <a href="https://www.hydroshare.org/">HydroShare</a>, maintaining and updating your draft articles can be drastically simplified with the <em>sciunit</em>(1) tool.</p>
 <p>Issue the following command to create a new article for the current sciunit:</p>
 <blockquote>
@@ -102,7 +102,7 @@ Paste the authorization code:
 </code></pre>
 <p>Here we are running OAuth2 flow for HydroShare.  After you have authorized the <em>sciunit</em> tool in a web browser and pasted in the auth code,</p>
 <pre><code>Paste the authorization code: AoxTbXnjzTfIa3OP5d5unxImPn0Noc
-Logged in as &quot;Yuan, Zhihao &lt;lichray@gmail.com&gt;&quot;
+Logged in as &quot;User &lt;user@email.com&gt;&quot;
 Title for the new article: New Article for Project1
 new: 8.93MB [00:01, 4.72MB/s]
 </code></pre>
@@ -113,7 +113,7 @@ new: 8.93MB [00:01, 4.72MB/s]
 </blockquote>
 <p>command to pick up.  So after you make a few changes to the current sciunit, such as capturing a new execution, the above command can silently keep your article on HydroShare up-to-date.  However, if you run</p>
 <pre class="hljs language-bash"><code>&gt; sciunit push my_new_article --setup hs
-Logged <span class="hljs-keyword">in</span> as <span class="hljs-string">"Yuan, Zhihao &lt;lichray@gmail.com&gt;"</span>
+Logged <span class="hljs-keyword">in</span> as <span class="hljs-string">"User &lt;user@email.com&gt;"</span>
 Create a new version of the article <span class="hljs-string">"New Article for Project1"</span>? [y/N]
 </code></pre>
 <p>again, you are creating another new article rather than updating the existing one.  If you answer ‘<code>y</code>’, the article will be a new “version” (HydroShare feature) of the existing one; if you answer ‘<code>n</code>’, the new article can have a different title.  In case you accidentally run into this query and cannot answer it, just press “Ctrl-D” to cancel the operation.</p>

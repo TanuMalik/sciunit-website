@@ -690,6 +690,8 @@ li.sub-list, #doc-tutorial>ol, #doc-config>ol{
   font-size: 14px;
   font-size: 1.4rem;
   color: #555555;
+  margin: initial;
+  display: initial;
 }
 
 .paper-abstract{
