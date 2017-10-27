@@ -33,7 +33,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <br>
-                <h2 style="text-align: center">Sciunit: a system for easily containerizing, sharing, and visualizing scientific applications
+                <h2 style="text-align: center">Sciunit: a system for easily containerizing, sharing, and tracking scientific applications
                 </h2>
 
             </div>
@@ -45,31 +45,56 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p>
-                            The sciunit is a Linux command-line tool that answers the call for a reusable research object that containerizes and stores
-                            applications simply and efficiently, facilitates sharing and collaboration, and eases the task
-                            of executing, understanding, and building on shared work.
+                            Sciunits are efficient, lightweight, self-contained packages of computational experiments that can be guaranteed to repeat or reproduce regardless of deployment issues. Sciunit
+                            answers the call for a reusable research object that containerizes and stores applications simply and efficiently, facilitates sharing and collaboration, and eases the task of executing, understanding, and building on shared work.
                         </p>
+                        <p>To create sciunits, <a href="/install">install</a> our Linux command-line tool.</a></p>
                         <br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>Our Team</h2>
-                        <ul id="list-persons">
-                            <li>Tanu Malik</li>
-                            <li>Cristian Vlaescu, Programmer</li>
-                            <li>Max Khon, Programmer</li>
-                            <li>Xiang Li, Master's student, current</li>
-                            <li>Quan Pham, Phd, alumni</li>
-                            <li>Rupa Kommineni, Master's student, alumni</li>
-                        </ul>
+                        <h2 style="text-align: center">News</h2>
+                        <p>Oct '17: Gabriel Fils presents Sciunits paper at IEEE eScience. Slides are here</p>
+                        <p>Sep '17: <a href="https://bitbucket.org/geotrust/sciunit2">Sciunit2</a> released</p>  <!-- link to bitbucket repo  -->
+                        <p>Jun '17: Sciunit.run demonstrated at <a href="https://www.earthcube.org/2017-all-hands-meeting">EarthCube All Hands Meeting in Seattle</a></p>
+                        <p>Jun '16: NSF funds <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1639759&HistoricalAwards=false">Geotrust</a>: improving sharing and reproducibility of geoscience applications</p>
+                        <p>Jan '16: <a href="http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=16041">Invited to Dagstuhl seminar on Reproducible Science</a></p>
+                        <p>Sep '15: <a href="https://github.com/legendOfZelda/LDV">VLDB Demo</a> on light-weight database virtualization.</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 style="text-align: center" >Team Members</h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <ul>
+                                    {% for member in team["team"] %}
+                                        <li><a href="{{member[2]}}">{{member[0]}}<span class="work-title" style="white-space: pre-line">{{member[1]}}</span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="col-lg-4"> 
+                                <h4>Alumni</h4>
+                                <ul>
+                                    {% for member in team["alumni"] %}
+                                        <li><a href="{{member[2]}}">{{member[0]}}<span class="work-title" style="white-space: pre-line">{{member[1]}}</span></a></li>
+                                    {% endfor %}
+                                </ul>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 offset-lg-1">
                 <div class="row">
                     <div class="col-lg-12">
-                        <!-- Place Try Sciunit Button Here! -->
+                        <h2>Demo</h2>
+                        <br>
+                        <a href="https://try.sciunit.run" class="btn btn-lg btn-info" role="button"><p>Try Sciunit!</p></a>
                     </div>
                 </div>
             </div>
