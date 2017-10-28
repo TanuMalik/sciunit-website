@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 
-from flask import Flask, url_for, request, render_template, abort,make_response
+from flask import Flask, request, render_template, abort, make_response
 from flask_mail import Mail, Message
 from werkzeug.exceptions import HTTPException
 import hashlib
@@ -38,30 +38,28 @@ class NotModified(HTTPException):
 
 @app.route("/")
 def homepage():
-    filename="index.html"
+    filename = "index.html"
     response = make_response(render_template(filename, team=team.data))
     return addEtagCaching(response)
 
 
-
-
 @app.route('/install/')
 def downloadpage():
-    filename="install.html"
+    filename = "install.html"
     response = make_response(render_template(filename))
     return addEtagCaching(response)
 
 
 @app.route('/docs/')
 def docspage():
-    filename="docs.html"
+    filename = "docs.html"
     response = make_response(render_template(filename))
     return addEtagCaching(response)
 
 
 @app.route('/papers/')
 def paperspage():
-    filename="papers.html"
+    filename = "papers.html"
     response = make_response(render_template(filename))
     return addEtagCaching(response)
 
@@ -80,15 +78,15 @@ def supportpage():
             body=message,
             reply_to=user_email)
         mail.send(email_msg)
-    filename="support.html"
+    filename = "support.html"
     response = make_response(render_template(filename))
     return addEtagCaching(response)
-    
 
 
 @app.route('/cb')
 def default_home():
     """ Render the authorization code for user"""
-    filename="cb.html"
-    response = make_response(render_template(filename,code=request.args.get('code')))
+    filename = "cb.html"
+    response = make_response(render_template(filename,
+                                             code=request.args.get('code')))
     return addEtagCaching(response)
