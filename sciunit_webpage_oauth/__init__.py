@@ -2,7 +2,7 @@ from flask import Flask, url_for, request, render_template, abort,make_response
 from flask_mail import Mail, Message
 from zlib import adler32
 import os
-import json
+import team
 
 
 app = Flask(__name__)
@@ -29,9 +29,7 @@ def etag_for(filename):
 @app.route("/")
 def homepage():
     filename="index.html"
-    with open('./json/team.json') as team_data:
-        json_team = json.load(team_data)
-    response = make_response(render_template(filename,team=json_team))
+    response = make_response(render_template(filename, team=team.data))
     return addEtagCaching(response, filename)
 
 
