@@ -1,8 +1,11 @@
-from flask import Flask, url_for, request, render_template, abort,make_response
+from __future__ import absolute_import
+
+from flask import Flask, request, render_template, abort, make_response
 from flask_mail import Mail, Message
-from zlib import adler32
+from werkzeug.exceptions import HTTPException
+import hashlib
 import os
-import team
+from . import team
 
 
 app = Flask(__name__)
@@ -16,44 +19,49 @@ mail = Mail(app)
 pages = []
 
 
-def addEtagCaching(resp, filename):
-    resp.set_etag(etag_for(os.path.join('templates', filename)))
-    resp.headers['Expires'] = 'Thu, 14 Jan 2018 00:00:00 GMT'
+def addEtagCaching(resp):
+    if not resp.is_streamed:
+        etag = etag_for(resp.data)
+        if (etag in request.if_none_match):
+            raise NotModified
+        resp.set_etag(etag)
     return resp
 
-def etag_for(filename):
-    st = os.stat(filename)
-    return 'flask-%s-%s-%s' % (st.st_mtime, st.st_size, 
-            adler32(os.path.abspath(filename)) & 0xffffffff)
+
+def etag_for(data):
+    return hashlib.sha1(data).hexdigest()
+
+
+class NotModified(HTTPException):
+    code = 304
+
 
 @app.route("/")
 def homepage():
-    filename="index.html"
+    filename = "index.html"
     response = make_response(render_template(filename, team=team.data))
-    return addEtagCaching(response, filename)
-
-
+    return addEtagCaching(response)
 
 
 @app.route('/install/')
 def downloadpage():
-    filename="install.html"
+    filename = "install.html"
     response = make_response(render_template(filename))
-    return addEtagCaching(response, filename)
+    return addEtagCaching(response)
 
 
 @app.route('/docs/')
 def docspage():
-    filename="docs.html"
+    filename = "docs.html"
     response = make_response(render_template(filename))
-    return addEtagCaching(response, filename)
+    return addEtagCaching(response)
 
 
 @app.route('/papers/')
 def paperspage():
-    filename="papers.html"
+    filename = "papers.html"
     response = make_response(render_template(filename))
-    return addEtagCaching(response, filename)
+    return addEtagCaching(response)
 
 
 @app.route('/support/', methods=['GET', 'POST'])
@@ -70,15 +78,15 @@ def supportpage():
             body=message,
             reply_to=user_email)
         mail.send(email_msg)
-    filename="support.html"
+    filename = "support.html"
     response = make_response(render_template(filename))
-    return addEtagCaching(response, filename)
-    
+    return addEtagCaching(response)
 
 
 @app.route('/cb')
 def default_home():
     """ Render the authorization code for user"""
-    filename="cb.html"
-    response = make_response(render_template(filename,code=request.args.get('code')))
-    return addEtagCaching(response, filename)
+    filename = "cb.html"
+    response = make_response(render_template(filename,
+                                             code=request.args.get('code')))
+    return addEtagCaching(response)
