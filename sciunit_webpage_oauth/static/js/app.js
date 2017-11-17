@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    let click = false;
     var $root = $('html, body');
     $('#stickyContents li').on('click','a', function(e){ 
        e.preventDefault();
@@ -11,7 +12,6 @@ $(document).ready(function(){
     
     
     $('.abstract-toggle').click(function(){
-        console.log('toggle');
         $(this).parent().children('.paper-abstract').toggle("display")
-    })
+    });
 })

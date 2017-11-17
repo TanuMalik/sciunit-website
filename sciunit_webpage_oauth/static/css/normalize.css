@@ -461,12 +461,12 @@ html{
   min-height: 100%;
   /*Scale font-size so 1.0 rem = 10 px to ensure compatible with all browsers  */
   font-size: 62.5%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  font-family: 'Lato', sans-serif
+  font-family: 'Roboto', sans-serif
 }
 .footer {
   position: absolute;
@@ -482,6 +482,10 @@ body {
   color: white;
   text-align: center;
   float: right;
+}
+
+h1,h2,h3{
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 
@@ -522,7 +526,7 @@ h3{
 p,li, samp, input, textarea, dd, dt{
   font-size: 18px;
   font-size: 1.8rem;
-  font-family: 'Work Sans', 'sans-serif';
+  font-family: 'Roboto', 'sans-serif';
   word-wrap: break-word;
 }
 
@@ -555,11 +559,20 @@ samp{
 code{
   white-space: nowrap;
 }
+.navbar-brand{
+  display:block;
+  text-align: center;
+}
 .navbar-brand h1{
   color: var(--geotrust-main-color);
   color: #2b4c81;
   text-align: center;
   margin: 0;
+}
+
+
+.navbar-brand a{
+  display: inline-block;
 }
 
 .nav-link{
@@ -626,6 +639,7 @@ code{
   .navbar-nav{
     height: 47px;
   }
+  
 }
 
 .nav-link{
@@ -638,10 +652,15 @@ code{
   }
 
   .navbar-brand img{
-    display:block;
+    display: block;
     margin: 0 auto;
-    height: 190px;
-    width: auto; 
+  }
+  .navbar-toggler{
+    margin: 1em;
+    max-width: 10vw;
+    min-width:5vw;
+    min-height: 3em;
+
   }
 }
 li.sub-list, #doc-tutorial>ol, #doc-config>ol{
@@ -724,7 +743,6 @@ li.sub-list, #doc-tutorial>ol, #doc-config>ol{
   border-radius: 4px;
   
 }
-
 #stickyContents, #stickyContents li a{
   color: whitesmoke;
   text-align: center;
@@ -808,6 +826,7 @@ label{
 footer p{
   font-size: 12px;
   font-size: 1.2rem;
+  color: #cecece;
 }
 
 #demoArea h3{
@@ -830,8 +849,13 @@ footer p{
   color: red;
 }
 
+section h1{
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+
 pre{
-  padding: 3px 8px;
+  padding: 1.8ex;
   overflow-x: auto;
   background-color: #f6f6f6;
   font-size: 14px;
@@ -868,4 +892,8 @@ pre > code{
     font-size: 1.4rem;
     font-size: 14px;
   }
+}
+
+#footer-spacer{
+  height: 3.5em;
 }
