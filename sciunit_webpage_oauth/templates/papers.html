@@ -1,27 +1,26 @@
-{% extends "base.html" %} {% block title %} Papers {% endblock %} 
-{% block head %}
- {{super()}}
- <script src="/static/js/app.js"></script>
-{% endblock %}
-{% block content %}
+{% extends "base.html" %} {% block title %} Papers {% endblock %} {% block head %} {{super()}}
+<script src="/static/js/app.js"></script> {% endblock %} {% block content %}
 <nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    <a href="/" class="navbar-brand">
-        	<img src="/static/assets/images/new_GeoTrust.png" id="sciunit-logo" width="135" height="110" alt="Geotrust">
-        </a>
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-brand">
+            <a href="/">
+                <img src="/static/assets/images/new_GeoTrust.png" id="sciunit-logo" height="110" alt="Geotrust">
+            </a>
+        </div>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class='nav-item '>
                 <a class="nav-link" href="/">Sciunit</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/install/">Install<a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/docs/">Documentation </a>
+                <a class="nav-link" href="/install/">Install
+                    <a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/docs/">Documentation </a>
             </li>
             <li class="nav-item active-nav">
                 <a class="nav-link" href="/papers/">Papers</a>
@@ -37,27 +36,41 @@
     <div class="row">
         <nav class="col-lg-2" id=myScrollspy>
             <ul class="nav nav-pills flex-column" data-spy="affix" data-offset-top="205" id="stickyContents">
-                <li><a href="#research">Research Papers</a></li>
-                <li><a href="#application">Application Papers</a></li>
-                <li><a href="#presentations">Presentations</a></li>
-                <li><a href="#video">Video</a></li>
+                <li>
+                    <a href="#research">Research Papers</a>
+                </li>
+                <li>
+                    <a href="#application">Application Papers</a>
+                </li>
+                <li>
+                    <a href="#presentations">Presentations</a>
+                </li>
+                <li>
+                    <a href="#video">Video</a>
+                </li>
             </ul>
         </nav>
         <div class="col-lg-8">
             <div class="page-header">
-                <h2 class="page-title">Papers</h2>
+                <h2 id="research"class="page-title">Papers</h2>
                 <hr />
             </div>
             <ol>
                 <li>
                     <!-- Paper #1-->
-                    <p>PROVaaS: Provenance-as-a-Service. In Theory and Practice of Provenance (TaPP) (poster)<span class='date'> 2014</span>                        [<a href="http://dbgroup.cdm.depaul.edu/~tanu/SciDataspace/SciDataspace.html">PDF</a>]</p>
+                    <p>PROVaaS: Provenance-as-a-Service. In Theory and Practice of Provenance (TaPP) (poster)
+                        <span class='date'>
+                        2014</span> [
+                        <a href="http://dbgroup.cdm.depaul.edu/~tanu/SciDataspace/SciDataspace.html">PDF</a>]</p>
                 </li>
                 <li>
                     <!--Paper #2-->
-                    <p>H. Meng, R. Kommineni, Q. Pham, R. Gardner, T. Malik, and D. Thain. <em>An Invariant Framework for Conducting Reproducible Computational Science.</em>                        In Journal of Computational Science, Elsevier,<span class="date"> 2015. </span><strong>Invited</strong>                        [
-                        <a href="https://www.academia.edu/15629769/An_Invariant_Framework_for_Conducting_Reproducible_Computational_Science">PDF</a>],
-                        [
+                    <p>H. Meng, R. Kommineni, Q. Pham, R. Gardner, T. Malik, and D. Thain.
+                        <em>An Invariant Framework for Conducting Reproducible Computational Science.</em> In Journal of Computational
+                        Science, Elsevier,
+                        <span class="date"> 2015. </span>
+                        <strong>Invited</strong> [
+                        <a href="https://www.academia.edu/15629769/An_Invariant_Framework_for_Conducting_Reproducible_Computational_Science">PDF</a>], [
                         <a href="https://sites.google.com/site/invariantcompatlas/">Software</a>]
                     </p>
                     <button class="btn btn-lg abstract-toggle">Abstract</button>
@@ -95,11 +108,10 @@
                 <li>
                     <!--Paper #3-->
                     <p>Q. Pham, S. Thaler, T. Malik, B. Glavic, I. Foster. Light-weight Database Virtualization. In IEEE International
-                        Conference on Data Engineering (ICDE),<span class="date"> 2015. </span> [
-                        <a href="https://www.academia.edu/15628762/LDV_Light-weight_Database_Virtualization" target="_blank">PDF</a>],
-                        [
-                        <a href="http://www.slideshare.net/TanuMalik/ldv-lightweight-database-virtualization" target="_blank">PPT</a>],
-                        [
+                        Conference on Data Engineering (ICDE),
+                        <span class="date"> 2015. </span> [
+                        <a href="https://www.academia.edu/15628762/LDV_Light-weight_Database_Virtualization" target="_blank">PDF</a>], [
+                        <a href="http://www.slideshare.net/TanuMalik/ldv-lightweight-database-virtualization" target="_blank">PPT</a>], [
                         <a href="https://github.com/legendOfZelda/LDV" target="_blank">Software</a>]
                     </p>
                     <button class="btn btn-lg abstract-toggle">Abstract</button>
@@ -123,9 +135,9 @@
                 <li>
                     <!--Paper #4-->
                     <p>Q. Pham, T. Malik, I. Foster. SOLE: Towards Descriptive and Interactive Publications. In Implementing
-                        Reproducible Research, Editor: Victoria Stodden, et. al, CRC Press,<span class="date"> 2014.</span>                        [
-                        <a href="https://www.academia.edu/17347896/SOLE_Towards_Descriptive_and_Interactive_Publications" target="_blank">PDF</a>],
-                        [
+                        Reproducible Research, Editor: Victoria Stodden, et. al, CRC Press,
+                        <span class="date"> 2014.</span> [
+                        <a href="https://www.academia.edu/17347896/SOLE_Towards_Descriptive_and_Interactive_Publications" target="_blank">PDF</a>], [
                         <a href="https://gitlab.com/quanpt/sole-pdf-reader.git">Software</a>]
                     </p>
                     <button class="btn btn-lg abstract-toggle">Abstract</button>
@@ -155,11 +167,13 @@
                 <li>
                     <!--Paper #5-->
                     <p>Q. Pham, T. Malik, I. Foster. Auditing and Maintaing Provenance in Software Packages. In International
-                        Provenance and Annotation Workshop (IPAW),<span class="date"> 2014.</span> </p>
-                    [<a href="https://www.academia.edu/17065827/Auditing_and_Maintaining_Provenance_in_Software_Packages"
-                        target="_blank">PDF</a>], [
-                    <a href="http://www.slideshare.net/TanuMalik/auditing-and-maintaining-provenance-in-software-packages" target="_blank">PPT</a>],
+                        Provenance and Annotation Workshop (IPAW),
+                        <span class="date"> 2014.</span>
+                    </p>
                     [
+                    <a href="https://www.academia.edu/17065827/Auditing_and_Maintaining_Provenance_in_Software_Packages"
+                        target="_blank">PDF</a>], [
+                    <a href="http://www.slideshare.net/TanuMalik/auditing-and-maintaining-provenance-in-software-packages" target="_blank">PPT</a>], [
                     <a href="https://gitlab.com/quanpt/provenance-to-use.git" target="_blank">Software</a>]
                     </p>
                     <button class="btn btn-lg abstract-toggle">Abstract</button>
@@ -183,7 +197,8 @@
                 <li>
                     <!--Paper #6-->
                     <p> D. Zhao, C. Shou, T. Malik, I. Raicu. Distributed Data Provenance for Large-Scale Data-Intensive Computing,
-                        In IEEE Cluster, <span class="date">2013.</span> [
+                        In IEEE Cluster,
+                        <span class="date">2013.</span> [
                         <a href="https://www.academia.edu/17065820/Distributed_data_provenance_for_large-scale_data-intensive_computing" target="_blank">PDF</a>]
                     </p>
                     <button class="btn btn-lg abstract-toggle">Abstract</button>
@@ -206,8 +221,9 @@
                 <li>
                     <!--Paper #7-->
                     <p>Q. Pham, T. Malik, I. Foster. Using Provenance for Repeatability. In USENIX NSDI Workshop on Theory and
-                        Practice of Provenance (TaPP), <span class="date">2013.</span>[<a href="https://www.academia.edu/15630065/Using_Provenance_for_Repeatability"
-                            target="_blank">PDF</a>], [
+                        Practice of Provenance (TaPP),
+                        <span class="date">2013.</span>[
+                        <a href="https://www.academia.edu/15630065/Using_Provenance_for_Repeatability" target="_blank">PDF</a>], [
                         <a href="http://www.slideshare.net/TanuMalik/ptu-tapp13" target="_blank">PPT</a>], [
                         <a href="https://gitlab.com/quanpt/provenance-to-use.git" target="_blank">Software</a>]
                     </p>
@@ -225,9 +241,9 @@
                 <li>
                     <!--Paper #8-->
                     <p> T. Malik, A. Gehani, D. Tariq, F. Zaffar. Managing and Querying Distributed Data Provenance in SPADE.
-                        In Data Provenance and Data Management for eScience, Springer, <span class="date">2012.</span> [
-                        <a href="https://www.academia.edu/17347677/Sketching_Distributed_Data_Provenance" target="_blank">PDF</a>],
-                        [
+                        In Data Provenance and Data Management for eScience, Springer,
+                        <span class="date">2012.</span> [
+                        <a href="https://www.academia.edu/17347677/Sketching_Distributed_Data_Provenance" target="_blank">PDF</a>], [
                         <a href="https://github.com/ashish-gehani/SPADE" target="_blank">Software</a>]
                     </p>
                     <button class="btn btn-lg abstract-toggle">Abstract</button>
@@ -245,7 +261,8 @@
                 <li>
                     <!--Paper #9-->
                     <p> A. Gehani, D. Tariq, B. Baig, T. Malik. Policy-Based Integration of Provenance Metadata. In IEEE International
-                        Symposium on Policies for Distributed Systems and Networks (POLICY), <span class="date">2011.</span>                        [
+                        Symposium on Policies for Distributed Systems and Networks (POLICY),
+                        <span class="date">2011.</span> [
                         <a href="https://www.academia.edu/2678704/Policy-Based_Integration_of_Provenance_Metadata" target="_blank">PDF</a>]
                     </p>
                     <button class="btn btn-lg abstract-toggle">Abstract</button>
@@ -260,8 +277,7 @@
                     <!--paper #10-->
                     <p> T. Malik, L. Nistor, A. Gehani. Tracking and Sketching Distributed Data Provenance. In IEEE eScience,
                         <span class="date">2010.</span> [
-                        <a href="https://www.academia.edu/1383857/Tracking_and_Sketching_Distributed_Data_Provenance" target="_blank">PDF</a>],
-                        [
+                        <a href="https://www.academia.edu/1383857/Tracking_and_Sketching_Distributed_Data_Provenance" target="_blank">PDF</a>], [
                         <a href="https://github.com/ashish-gehani/SPADE" target="_blank">Software</a>]
                     </p>
                     <button class="btn btn-lg abstract-toggle">Abstract</button>
@@ -278,6 +294,28 @@
                         queries
                     </p>
                 </li>
+                <!-- Paper # 11 -->
+                <li>
+                    <p>D. That, G. Fils, Z. Yuan, T. Malik. Sciunits: Reusable Research Objects. In IEEE eScience,
+                        <span class="date">2017</span> [
+                        <a href="#" target="_blank">PDF</a> ],[
+                        <a href="https://www.slideshare.net/TanuMalik/sciunits-resuable-research-object" target="_blank">PPT</a> ]
+                    </p>
+                    <button class="btn btn-lg abstract-toggle">Abstract</button>
+                    <p class="paper-abstract">Science is conducted collaboratively, often requiring knowledge sharing about computational experiments.
+                        When experiments include only datasets, they can be shared using Uniform Resource Identifiers (URIs)
+                        or Digital Object Identifiers (DOIs). An experiment, however, seldom includes only datasets, but
+                        more often includes software, its past execution, provenance, and associated documentation. The Research
+                        Object has recently emerged as a comprehensive and systematic method for aggregation and identification
+                        of diverse elements of computational experiments. While a necessary method, mere aggregation is not
+                        sufficient for the sharing of computational experiments. Other users must be able to easily recompute
+                        on these shared research objects. In this paper, we present the sciunit, a reusable research object
+                        in which aggregated content is recomputable. We describe a Git-like client that efficiently creates,
+                        stores, and repeats sciunits. We show through analysis that sciunits repeat computational experiments
+                        with minimal storage and processing overhead. Finally, we provide an overview of sharing and reproducible
+                        cyberinfrastructure based on sciunits gaining adoption in the domain of geosciences.
+                    </p>
+                </li>
             </ol>
         </div>
     </div>
@@ -286,16 +324,19 @@
             <h3 class="page-title" id="presentations">Presentations</h3>
             <ol>
                 <li>
-                    <p><a href="http://www.slideshare.net/TanuMalik/the-earthcube-all-hands-meeting-may-2015" target="_blank">GeoDataspace: Better Tools for Metadata Management</a>                        The EarthCube All Hands Meeting, May 2015.</p>
+                    <p>
+                        <a href="http://www.slideshare.net/TanuMalik/the-earthcube-all-hands-meeting-may-2015" target="_blank">GeoDataspace: Better Tools for Metadata Management</a> The EarthCube All Hands Meeting, May 2015.</p>
                 </li>
                 <li>
-                    <p><a href="http://www.slideshare.net/TanuMalik/globusworld-2015" target="_blank">A Reproducible Framework Powered By Globus</a>The
-                        Globus World, Apr. 2015. (<em>Presented by Kyle Chard</em>) </p>
+                    <p>
+                        <a href="http://www.slideshare.net/TanuMalik/globusworld-2015" target="_blank">A Reproducible Framework Powered By Globus</a>The Globus World, Apr. 2015. (
+                        <em>Presented by Kyle Chard</em>) </p>
                 </li>
                 <li>
-                    <p><a href="http://www.slideshare.net/TanuMalik/geodataspace-simplifying-data-management-tasks-with-globus"
-                            target="_blank">GeoDataspace: Simplifying Data Management Tasks with Globus</a>. The American Geophysical
-                        Union (AGU), Dec. 2014.</p>
+                    <p>
+                        <a href="http://www.slideshare.net/TanuMalik/geodataspace-simplifying-data-management-tasks-with-globus"
+                            target="_blank">GeoDataspace: Simplifying Data Management Tasks with Globus</a>. The American Geophysical Union (AGU),
+                        Dec. 2014.</p>
                 </li>
                 <li>
                     <p>Reproducibility is hard. Not NP-hard. The Notre Dame DASPOS Workshop, Sept. 2014. </p>

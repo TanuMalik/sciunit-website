@@ -1,12 +1,15 @@
-{% extends "base.html" %} {% block title %}Installation{% endblock %} {% block content %}
+{% extends "base.html" %} {% block title %}Installation{% endblock %} {% block head %} {{super()}}
+<script src="/static/js/app.js"></script> {% endblock %} {% block content %}
 <nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    <a href="/" class="navbar-brand">
-        	<img src="/static/assets/images/new_GeoTrust.png" id="sciunit-logo" width="135" height="110" alt="Geotrust">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-brand">
+        <a href="/">
+            <img src="/static/assets/images/new_GeoTrust.png" id="sciunit-logo" height="110" alt="Geotrust">
         </a>
+    </div>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class='nav-item'>
@@ -32,8 +35,12 @@
     <div class="row">
         <nav class="col-lg-2" id=myScrollspy>
             <ul class="nav nav-pills flex-column" data-spy="affix" data-offset-top="205" id="stickyContents">
-                <li><a href="#install-pip">Install with Pip</a></li>
-                <li><a href="#">Build from Source</a></li>
+                <li>
+                    <a href="#install-pip">Install with Pip</a>
+                </li>
+                <li>
+                    <a href="#">Build from Source</a>
+                </li>
             </ul>
         </nav>
         <div class="col-lg-8">
