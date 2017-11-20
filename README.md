@@ -1,3 +1,3 @@
-# Sciunit Website w/Oauth2 callback route   
+# Sciunit Website
 
-This is a simplified website for Sciunit-CLI. It doesn't support the Sciunit demo. 
+This is the main website for [Sciunit](https://sciunit.run/).
