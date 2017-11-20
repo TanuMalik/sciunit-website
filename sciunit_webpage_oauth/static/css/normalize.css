@@ -552,8 +552,8 @@ li span{
   margin-bottom: 1.0rem;
 }
 
-samp{
-  font-family: 'Ubuntu Mono',monospace;
+pre, samp{
+  font-family:  Consolas, 'Ubuntu Mono' ,monospace;
 }
 
 code{
@@ -858,8 +858,8 @@ pre{
   padding: 1.8ex;
   overflow-x: auto;
   background-color: #f6f6f6;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 pre > code{
