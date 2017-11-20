@@ -1,0 +1,33 @@
+image: python:2.7
+
+pipelines:
+  default:
+    - step:
+        script:
+          - pip install tox
+          - tox
+          - python setup.py bdist_wheel
+          - scp dist/sciunit_webpage_oauth-0.1-py2-none-any.whl ubuntu@sciunit-staging.4bsd.biz:.
+        artifacts:
+          - dist/**
+    - step:
+        name: Staging
+        script:
+          - ssh ubuntu@sciunit-staging.4bsd.biz "bash -c '. venv/bin/activate; pip install -U sciunit_webpage_oauth-0.1-py2-none-any.whl'"
+          - ssh ubuntu@sciunit-staging.4bsd.biz "sudo systemctl restart sciunit_webpage"
+  branches:
+    master:
+      - step:
+          script:
+            - pip install tox
+            - tox
+            - python setup.py bdist_wheel
+          artifacts:
+            - dist/**
+      - step:
+          name: Deploy
+          trigger: manual
+          script:
+            - scp dist/sciunit_webpage_oauth-0.1-py2-none-any.whl ubuntu@sciunit.run:.
+            - ssh ubuntu@sciunit.run "bash -c '. venv/bin/activate; pip install -U sciunit_webpage_oauth-0.1-py2-none-any.whl'"
+            - ssh ubuntu@sciunit.run "sudo systemctl restart sciunit_webpage"
