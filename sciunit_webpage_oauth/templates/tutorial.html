@@ -7,7 +7,7 @@ All these factors contribute to the difficulties of trying out others&rsquo; wor
 How about, starting from your next paper, you publish the article along with a
 &ldquo;sciunit&rdquo; research object to encapsulate all the workflows you plan to
 demonstrate, allowing your readers and reviewer to try out your work?</p>
-<h2>Basic concepts</h2>
+<h2 id="doc-Create">Basic concepts</h2>
 <h3>Sciunit</h3>
 <p>&ldquo;Sciunit&rdquo; is both the name of the reusable research object we defined and also
 the name of command-line tool that creates, manages, and shares <em>sciunits</em>.  A
@@ -43,7 +43,7 @@ sciunit: show: sciunit <span class="s1">&#39;Project1&#39;</span> is empty
 </blockquote>
 <p>You can also load a sciunit into a workspace and then open it.  The following
 chapters describe more forms of the <code>open</code> command.</p>
-<h2>Capturing and testing your program</h2>
+<h2 id="doc-Capture">Capturing and testing your program</h2>
 <p>Let&rsquo;s start with a &ldquo;Hello World&rdquo; program in a shell script.</p>
 <div class="codehilite"><pre><span></span>&gt; cat hello.sh
 <span class="c1">#!/bin/sh</span>
@@ -129,7 +129,7 @@ the <code>list</code> command</p>
 <p>, or remove one of them with the <code>rm</code> command.  Note that after a removal all
 the remaining executions retain their current execution ids, and new
 executions will be assigned ids which are higher than the remaining ones.</p>
-<h2>Continue your work on another machine</h2>
+<h2 id="doc-Copy">Continue your work on another machine</h2>
 <p>While developing your paper, you might want to capture more executions on
 another machine, testing your sciunit in another environment, or maybe share
 the sciunit with a coauthor.  Conceptually, you want to copy &amp; paste,
@@ -159,7 +159,7 @@ the sciunit &ldquo;Project1.&rdquo;  The <code>open</code> command can also open
 So if you do not want to use <a href="https://file.io">file.io</a>, you can instead use
 the <code>sciunit copy -n</code> command to generate this file, and deliver the file to
 some other machine or to someone else.</p>
-<h2>Prepare your paper for review</h2>
+<h2 id="doc-Publish">Prepare your paper for review</h2>
 <p>The zip file mentioned above is the research object you are going to publish
 along with your paper.  You can manually select and upload such a file on
 websites that host sharing of research objects, however, if you are using

@@ -6,7 +6,7 @@ $(document).ready(function(){
        let href = $.attr(this, 'href');
        $root.animate({
            scrollTop: $(href).offset().top
-       }, 500)
+       }, 600)
        return false;
     });
     
