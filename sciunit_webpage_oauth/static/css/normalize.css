@@ -535,6 +535,7 @@ dd{
 }
 
 strong{
+  font-family: 'Inconsolata', monospace;
   font-weight: 800;
 }
 
@@ -553,10 +554,11 @@ li span{
 }
 
 pre, samp{
-  font-family:  Consolas, 'Ubuntu Mono' ,monospace;
+  font-family: "Inconsolata", Consolas, monospace !important;
 }
 
 code{
+  font-family: "Inconsolata", Consolas, monospace !important;
   white-space: nowrap;
 }
 .navbar-brand{
