@@ -2,3 +2,4 @@ include README.md
 include requirements.txt
 recursive-include sciunit_webpage_oauth/static *
 recursive-include sciunit_webpage_oauth/templates *
+recursive-include sciunit_webpage_oauth/uploads *
