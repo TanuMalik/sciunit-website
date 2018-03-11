@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 
-from flask import Flask, request, render_template, abort, make_response
+from flask import Flask
+from flask import request, render_template, make_response, send_from_directory
 from flask_mail import Mail, Message
 from werkzeug.exceptions import HTTPException
 import hashlib
@@ -62,6 +63,12 @@ def paperspage():
     filename = "papers.html"
     response = make_response(render_template(filename))
     return addEtagCaching(response)
+
+
+@app.route('/papers/<fn>')
+def papershosting(fn):
+    uploads = os.path.join(os.path.dirname(__file__), 'uploads')
+    return send_from_directory(uploads, fn)
 
 
 @app.route('/support/', methods=['GET', 'POST'])
