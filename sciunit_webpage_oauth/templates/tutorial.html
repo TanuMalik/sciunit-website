@@ -24,26 +24,28 @@ dependencies of the execution.</p>
 paper, you describe each workflow you want to discuss and reference it using
 its corresponding execution id in a sciunit &ndash; just like referencing a figure
 using a numerical figure id.</p>
-<h3>Workspace</h3>
+<p>
+	Sciunit is accessible both via command-line utility and the sciunit API available in python. The following tutorial primarily focuses on operating sciunit through the command-line. At the end, we show how to utilize the same commands through the sciunit python API.
+</p>
+
+<h2>Command-line Tool</h2>
 <p>The <em>sciunit</em>(1) command-line tool owns the directory <code>~/sciunit</code>.  A
 workspace for a sciunit is a subdirectory under <code>~/sciunit</code>.  The command</p>
-<blockquote>
-<p><code>sciunit create Project1</code></p>
-</blockquote>
+
+<pre>&gt; sciunit create Project1
+Opened empty sciunit at ~/sciunit/Project1
+</pre>
 <p>creates and opens an empty sciunit called &ldquo;Project1,&rdquo; where
-<code>~/sciunit/Project1</code> is its workspace.  You can verify these with</p>
-<div class="codehilite"><pre><span></span>&gt; sciunit show
-sciunit: show: sciunit <span class="s1">&#39;Project1&#39;</span> is empty
-</pre></div>
+<code>~/sciunit/Project1</code> is its workspace.
 
-
-<p>You can switch among multiple workspaces with the <code>open</code> command:</p>
-<blockquote>
-<p><code>sciunit open Project2</code></p>
-</blockquote>
-<p>You can also load a sciunit into a workspace and then open it.  The following
+<p>You can switch among multiple existing workspaces with the <code>open</code> command:</p>
+<pre>&gt; sciunit open Project2
+Switched to sciunit 'Project2'
+</pre>
+<p>You can also bring a sciunit into a workspace and then open it. The following
 chapters describe more forms of the <code>open</code> command.</p>
-<h2 id="doc-Capture">Capturing and testing your program</h2>
+
+<h3 id="doc-Capture">Capturing and testing your program</h3>
 <p>Let&rsquo;s start with a &ldquo;Hello World&rdquo; program in a shell script.</p>
 <div class="codehilite"><pre><span></span>&gt; cat hello.sh
 <span class="c1">#!/bin/sh</span>
@@ -68,12 +70,12 @@ hello, world
 <p>Now this program, along with its all its dependencies, has been captured as
 <code>e1</code> in &ldquo;Project1.&rdquo;  The &ldquo;show&rdquo; command can display the details of the last
 captured execution:</p>
-<div class="codehilite"><pre><span></span>&gt; sciunit show
+<div class="codehilite"><pre><span></span>&gt; sciunit show e1
      id: e1
 sciunit: Project1
 command: ./hello.sh
    size: <span class="m">2</span>.82 MB
-started: <span class="m">2017</span>-10-10 <span class="m">08</span>:42
+started: <span class="m">2020</span>-10-10 <span class="m">08</span>:42
 </pre></div>
 
 
@@ -97,8 +99,7 @@ somewhere under this directory.  The rest of the files are the underlying
 implementation of the conceptual &ldquo;sciunit.&rdquo;</p>
 <p>Now let&rsquo;s try a different way to capture an execution &ndash; capture as you go:</p>
 <div class="codehilite"><pre><span></span>&gt; sciunit <span class="nb">exec</span> -i
-Interactive capturing started<span class="p">;</span> press Ctrl-D to end
-&gt;
+Interactive capturing started<span class="p">;</span> press Ctrl-D to end.
 </pre></div>
 
 
@@ -129,7 +130,7 @@ the <code>list</code> command</p>
 <p>, or remove one of them with the <code>rm</code> command.  Note that after a removal all
 the remaining executions retain their current execution ids, and new
 executions will be assigned ids which are higher than the remaining ones.</p>
-<h2 id="doc-Copy">Continue your work on another machine</h2>
+<h3 id="doc-Copy">Continue your work on another machine</h3>
 <p>While developing your paper, you might want to capture more executions on
 another machine, testing your sciunit in another environment, or maybe share
 the sciunit with a coauthor.  Conceptually, you want to copy &amp; paste,
@@ -159,7 +160,8 @@ the sciunit &ldquo;Project1.&rdquo;  The <code>open</code> command can also open
 So if you do not want to use <a href="https://file.io">file.io</a>, you can instead use
 the <code>sciunit copy -n</code> command to generate this file, and deliver the file to
 some other machine or to someone else.</p>
-<h2 id="doc-Publish">Prepare your paper for review</h2>
+
+<h3 id="doc-Publish">Prepare your paper for review</h3>
 <p>The zip file mentioned above is the research object you are going to publish
 along with your paper.  You can manually select and upload such a file on
 websites that host sharing of research objects, however, if you are using
@@ -213,3 +215,16 @@ one.  If you answer &lsquo;<code>y</code>&rsquo;, the article will be a new &ldq
 feature) of the existing one; if you answer &lsquo;<code>n</code>&rsquo;, the new article can have a
 different title.  In case you accidentally run into this query and cannot
 answer it, just press &ldquo;Ctrl-D&rdquo; to cancel the operation.</p>
+
+<h2>Sciunit API</h2>
+<p>All the sciunit commands commands available through the command-line tool can also be accessed from within your python program through the sciunit API. Following is the basic syntax for using the API for a few commands. The rest of the commands are invoked in the same way:</p>
+<pre>
+<code>
+	&gt; from sciunit2.api import Sciunit
+	&gt; sciunit = Sciunit()
+	&gt; sciunit.create("Project1")
+	Opened empty sciunit at ~/sciunit/Project1
+	&gt; sciunit.open("Project2")
+	Switched to sciunit 'Project2'
+</code>
+</pre>

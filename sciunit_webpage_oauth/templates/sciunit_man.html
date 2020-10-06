@@ -22,44 +22,89 @@
         <dl>
             <dt><code>sciunit create</code> &lt;name&gt;</dt>
             <dd>Create a new sciunit under <em>~/sciunit/&lt;name&gt;</em> and open it. If the directory already exists, exit with an error.</dd>
+            <br>
             <dt><code>sciunit open</code> &lt;name&gt;|&lt;token#&gt;|&lt;path to sciunit.zip&gt;</dt>
             <dd>Open the sciunit under <em>~/sciunit/&lt;name&gt;</em> or designated by a <em>token#</em> obtained from <code>sciunit copy</code>, or one in a zipped sciunit package by extracting it to a temporary directory.</dd>
+            <br>
             <dt><code>sciunit open -m</code> &lt;name&gt;</dt>
             <dd>Rename the currently-opened sciunit to <em>&lt;name&gt;</em> and open it.</dd>
+            <br>
+            
             <dt><code>sciunit exec</code> &lt;executable&gt; [&lt;args...&gt;]</dt>
             <dd>
-                <p>Capture the execution of the given <em>executable</em> with the command line arguments <em>args</em>. The newly-created execution is added to the currently-opened sciunit and assigned execution id "<em>eN</em>", where <em>N</em> is a monotonically-increasing decimal. The first execution created in a sciunit has execution id "<em>e1</em>".</p>
-                <p>Note that the command line is launched using <cite>execvp(3)</cite> rather than interpreted by a shell.</p>
+                Capture the execution of the given <em>executable</em> with the command line arguments <em>args</em>. The newly-created execution is added to the currently-opened sciunit and assigned execution id "<em>eN</em>", where <em>N</em> is a monotonically-increasing decimal. The first execution created in a sciunit has execution id "<em>e1</em>". Note that the command line is launched using <cite>execvp(3)</cite> rather than interpreted by a shell.
             </dd>
+            <br>
+
             <dt><code>sciunit exec -i</code></dt>
             <dd>Launch the current user's shell and capture the user's interactions with the shell. This may involve executing multiple commands. A new execution is created on exiting the shell.</dd>
-            <dt><code>sciunit repeat</code> &lt;execution id&gt; [&lt;args...&gt;]</dt>
-            <dd>Repeat the execution of <em>execution id</em> from the currently-opened sciunit. If <em>args</em> present, use them in place of the command line arguments that were present when the command was captured with the <code>sciunit exec</code> command.</dd>
+            <br>
+
             <dt><code>sciunit list</code></dt>
             <dd>List the existing executions in the currently-opened sciunit.</dd>
-            <dt><code>sciunit show</code> [&lt;execution id&gt;]</dt>
-            <dd>Show detailed information about a specific execution (or the most recent execution, if no argument present) in the currently-opened sciunit.</dd>
+            <br>
+
+            <dt><code>sciunit show &lt;execution id&gt;</code></dt>
+            <dd>Show detailed information about a specific execution in the currently-opened sciunit.</dd>
+            <br>
+
+            <dt><code>sciunit repeat</code> &lt;execution id&gt;</dt>
+            <dd>Repeat the execution of <em>execution id</em> from the currently-opened sciunit exactly as it happened earlier.</dd>
+            <br>
+
+            <dt><code>sciunit given</code> &lt;glob&gt; 'repeat' &lt;execution id&gt; [&lt;%|args...&gt;]</dt>
+            <dd>Repeat the execution of <em>execution id</em> with additional files or directories specified by <em>glob</em>. The command expands <em>glob</em> into a list of filenames in the style of <em>glob(3)</em>, substitutes the first occurrence of <em>%</em>, if any, in the optional <em>args</em> for the 'repeat' mini-command with those filenames, and repeats the execution as if those files or directories are available relative to its current working directory at capture time.</dd>
+            <br>
+
+            <dt><code>sciunit commit</code></dt>
+            <dd>Commit the last repetition done by the <em>repeat</em> or the <em>given</em> command in the currently-opened sciunit as a new execution.</dd>
+            <br>
+
+
             <dt><code>sciunit rm</code> &lt;execution id&gt;</dt>
             <dd>
-                <p>Remove an existing execution from the currently-opened sciunit. A malformed execution id causes an error. Removing a nonexistent execution has no effect.</p>
-                <p>Note: the execution is removed from the records, but its data remains and may be shared with other executions.</p>
+                Remove an existing execution from the currently-opened sciunit. A malformed execution id causes an error. Removing a nonexistent execution has no effect.
+                <br>
+                Note: the execution is removed from the records, but its data remains and may be shared with other executions.
             </dd>
+            <br>
+
+            <dt><code>sciunit rm</code> &lt;eN&gt;&ndash;[M]</dt>
+            <dd>
+              Remove executions within a range, from <em>eN</em> to <em>eM</em>, inclusive. <em>M</em> may be omitted for a range from <em>eN</em> to the most recent.
+            </dd>
+            <br>
+
+            <dt><code>sciunit diff</code> &lt;execution id1&gt; &lt;execution id2&gt;</dt>
+            <dd> Shows difference between the two given executions in terms of their directory structures.
+            </dd>
+            <br>
+
+            <dt><code>sciunit sort</code> &lt;execution ids...&gt;</dt>
+            <dd>
+              Reorder the executions in the currently-opened sciunit to ensure that the executions specified in the arguments appear consecutively in the <code>sciunit list</code> command.
+            </dd>
+            <br>
+
             <dt><code>sciunit push</code> &lt;codename&gt; --setup &lt;service&gt;</dt>
             <dd>Create an article on a research object sharing <em>service</em> and attach the currently opened sciunit to the article. Assign different <em>codenames</em> to track multiple articles or multiple versions of an article created from a sciunit. The supported services include <a href="#figshare">figshare</a> (<cite>fs</cite>) and <a href="#hydroshare">HydroShare</a> (<cite>hs</cite>).</dd>
+            <br>
+
             <dt><code>sciunit push</code> [&lt;codename&gt;]</dt>
             <dd>Update the last pushed article with the latest sciunit data if no argument present. Otherwise, update the article referred to by <em>codename</em>.</dd>
+            <br>
+
             <dt><code>sciunit copy</code></dt>
             <dd>Copy the currently-opened sciunit to <a href="https://file.io/">file.io</a> and obtain a token for remotely opening it. The token is invalidated after being accessed or after one day, whichever happens first.</dd>
+            <br>
+
             <dt><code>sciunit copy</code> &lt;remote&gt;|&lt;name&gt;</dt>
             <dd>Copy a sciunit to a <em>remote</em> server or <em>~/sciunit/&lt;name&gt;</em>. The supported remote protocols include <a href="#globus">Globus</a>.</dd>
+            <br>
+
             <dt><code>sciunit copy -n</code></dt>
             <dd>Archive the currently-opened sciunit to <em>~/sciunit/&lt;name&gt;.zip</em>.</dd>
-            <dt><code>sciunit gc</code></dt>
-            <dd>Reduce the currently-opened sciunit's disk usage by garbage-collecting the unreferenced execution data.</dd>
-            <dt><code>sciunit alias</code> &lt;newcmd&gt; &lt;sub...&gt;</dt>
-            <dd>Add a new entry under the <code>[alias]</code> section in the user-wide config file <em>~/sciunit/config</em>. The setting enables <code>sciunit</code> <em>&lt;newcmd&gt; [&lt;args...&gt;]</em> to be reinterpreted as <code>sciunit</code> <em>&lt;sub...&gt; [&lt;args...&gt;]</em>.</dd>
-            <dt><code>sciunit ignore</code> &lt;path&gt;</dt>
-            <dd>Add a new entry under the <code>[ignore]</code> section in the unit-specific config file <em>~/sciunit/&lt;name&gt;/config</em>. If the <em>path</em> ends with <code>/</code>, exclude any paths prefixed with <em>path</em> when capturing; otherwise, exclude just <em>path</em>.</dd>
+            <br>
         </dl>
     </section>
 </section>
