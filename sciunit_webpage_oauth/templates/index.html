@@ -6,7 +6,7 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div  class="navbar-brand">
+        <div class="navbar-brand">
             <a href="/">
         	    <img src="/static/assets/images/new_GeoTrust.png" id="sciunit-logo" height="110" alt="Geotrust">
             </a>
@@ -23,15 +23,15 @@
                     <a class="nav-link" href="/docs/">Documentation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/manual/">Manual</a>
-               </li>
-                <li class="nav-item">
                     <a class="nav-link" href="/papers/">Papers</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/support/">Support</a>
                 </li>
             </ul>
+        </div>
+        <div class="navbar-brand">
+            <a href="https://bitbucket.org/geotrust/sciunit2/" target="_blank"><img src="https://img.icons8.com/color/96/000000/bitbucket.png"/></a>
         </div>
     </nav>
     <div class="container-fluid">
@@ -46,10 +46,27 @@
         <hr />
         <br>
         <div class="row">
+            <!-- news section -->
+          <nav class="col-lg-2" id=myScrollspy>
+                <ul class="nav nav-pills flex-column" data-spy="affix" data-offset-top="205" id="stickyContents">
+                    <li>
+                        Oct '20: <a href="https://bitbucket.org/geotrust/sciunit2">Sciunit2</a> released for python3.
+                    </li>
+                    <hr>
+                    <li>
+                        Jun '20: <a href="https://www.essoar.org/doi/abs/10.1002/essoar.10503514.1">Poster</a> presented at EarthCube 2020.
+                    </li>
+                    <hr>
+                    <li>
+                        Jun '20: <a href="https://sciunit.run/papers/PW_20_Sciunit_Demo.pdf">Demo</a> on sciunit presented in ProvenanceWeek 2020.
+                    </li>
+                </ul>
+                </nav>
+
             <div class="col-lg-6 offset-lg-1">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>
+                        <p style="text-align: justify;">
                             Sciunits are efficient, lightweight, self-contained packages of computational experiments that can be guaranteed to repeat or reproduce regardless of deployment issues. Sciunit
                             answers the call for a reusable research object that containerizes and stores applications simply and efficiently, facilitates sharing and collaboration, and eases the task of executing, understanding, and building on shared work.
                         </p>
@@ -59,17 +76,10 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <h3 style="text-align: center">News</h3>
-                        <p>Oct '20: <a href="https://bitbucket.org/geotrust/sciunit2">Sciunit2</a> released for python3.</p>
-                        <p>Jun '20: Poster on<a href="https://www.essoar.org/doi/abs/10.1002/essoar.10503514.1">Sciunit: A reproducible Container for EarthCube Community</a> presented at EarthCube 2020.</p>
-                        <p>Jun '20: Poster paper on<a href="https://sciunit.run/papers/PW_20_Sciunit_Demo.pdf"> Explaining and Replaying Containers using Provenance</a> presented in ProvenanceWeek 2020.</p>
-                        <p>Mar '18: New paper on <a href="https://sciunit.run/papers/DBGroup-TechReport-MDPI2018.pdf">Utilizing Provenance in Reusable Research Objects</a> in open access Informatics, MDPI Journal.</p>
-                        <p>Oct '17: Gabriel Fils presents Sciunits paper at IEEE eScience. Slides are <a href="https://www.slideshare.net/TanuMalik/sciunits-resuable-research-object">here</a></p>
-                        <p>Sep '17: <a href="https://bitbucket.org/geotrust/sciunit2">Sciunit2</a> released</p>  <!-- link to bitbucket repo  -->
-                        <p>Jun '17: Sciunit.run demonstrated at <a href="https://www.earthcube.org/2017-all-hands-meeting">EarthCube All Hands Meeting in Seattle</a></p>
-                        <p>Jun '16: NSF funds <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1639759&HistoricalAwards=false">Geotrust</a>: improving sharing and reproducibility of geoscience applications</p>
-                        <p>Jan '16: <a href="http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=16041">Invited to Dagstuhl seminar on Reproducible Science</a></p>
-                        <p>Sep '15: <a href="https://github.com/legendOfZelda/LDV">VLDB Demo</a> on light-weight database virtualization.</p>
+                        <h3 style="text-align: center">Demo</h3>
+                        <p style="text-align: center">TaPP 2020 Demo of sciunit
+                        <br>    
+                        <iframe src="https://drive.google.com/file/d/1lmuO9Nh6PviJX27KOuHjPcJ1ZdSm0CYx/preview" width="640" height="480"></iframe></p>
                     </div>
                 </div>
                 <br>

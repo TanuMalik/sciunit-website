@@ -22,9 +22,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="/docs/">Documentation </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/manual/">Manual</a>
-            </li>
             <li class="nav-item active-nav">
                 <a class="nav-link" href="/papers/">Papers</a>
             </li>
@@ -33,6 +30,9 @@
             </li>
         </ul>
     </div>
+    <div class="navbar-brand">
+        <a href="https://bitbucket.org/geotrust/sciunit2/" target="_blank"><img src="https://img.icons8.com/color/96/000000/bitbucket.png"/></a>
+        </div>
 </nav>
 <hr />
 <div class="container-fluid">
@@ -40,10 +40,7 @@
         <nav class="col-lg-2" id=myScrollspy>
             <ul class="nav nav-pills flex-column" data-spy="affix" data-offset-top="205" id="stickyContents">
                 <li>
-                    <a href="#research">Research Papers</a>
-                </li>
-                <li>
-                    <a href="#application">Application Papers</a>
+                    <a href="#papers">Research Papers</a>
                 </li>
                 <li>
                     <a href="#presentations">Presentations</a>
@@ -55,7 +52,7 @@
         </nav>
         <div class="col-lg-8">
             <div class="page-header">
-                <h2 id="research"class="page-title">Papers</h2>
+                <h2 id="papers"class="page-title">Papers</h2>
                 <hr />
             </div>
             <ol>
@@ -339,8 +336,13 @@
     </div>
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h3 class="page-title" id="presentations">Presentations</h3>
+        <h3 class="page-title" id="presentations">Presentations</h3>
+        <hr />
             <ol>
+                <li>
+                    <p>
+                        <a href="https://sciunit.run/papers/TaPP2020-Sciunit-Poster-Presentation.pptx" target="_blank">Explaining and Replaying Containers Using Provenance</a> TaPP, 2020.</p>
+                </li>                
                 <li>
                     <p>
                         <a href="http://www.slideshare.net/TanuMalik/the-earthcube-all-hands-meeting-may-2015" target="_blank">GeoDataspace: Better Tools for Metadata Management</a> The EarthCube All Hands Meeting, May 2015.</p>
@@ -370,5 +372,15 @@
             </ol>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h3 class="page-title" id="video">Video</h3>
+            <hr />
+            <p>Sciunit Demo video of TaPP 2020</p>
+            <br>
+            <iframe src="https://drive.google.com/file/d/1lmuO9Nh6PviJX27KOuHjPcJ1ZdSm0CYx/preview" width="640" height="480"></iframe>
+        </div>
+    </div>
+
 </div>
 {% endblock %}
