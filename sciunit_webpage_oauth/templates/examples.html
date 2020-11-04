@@ -1,0 +1,87 @@
+{% extends "base.html" %} 
+{% block title %} Examples {% endblock %} 
+{% block head %} 
+{{super()}}
+<script src="/static/js/app.js"></script> {% endblock %} {% block content %}
+<nav class="navbar navbar-toggleable-lg navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-brand">
+            <a href="/">
+                <img src="/static/assets/images/new_GeoTrust.png" id="sciunit-logo" height="110" alt="Geotrust">
+            </a>
+        </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class='nav-item '>
+                <a class="nav-link" href="/">Sciunit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/install/">Install
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/docs/">Documentation </a>
+            </li>
+            <li class="nav-item active-nav">
+                <a class="nav-link" href="/examples/">Examples</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="/papers/">Papers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/support/">Support</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-brand">
+        <a href="https://bitbucket.org/geotrust/sciunit2/" target="_blank"><img src="https://img.icons8.com/color/96/000000/bitbucket.png"/></a>
+        </div>
+</nav>
+<hr/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+        <h3 class="page-title" id="examples">Sciunit Usecases and Examples</h3>
+        <hr />
+        <p>
+            The following examples demonstrate the replicability and reproducibility of various computing use cases in Hydrology using Sciunit:
+        </p>
+            <ol>
+                <li>
+                    <a href="https://www.hydroshare.org/resource/8eecb4185eef4d0685682f087d3d84e9/" target="_blank">SUMMA Modeling Container</a>
+                </li>                
+                <li>
+                    <a href="https://www.hydroshare.org/resource/224556101f3641109910595b4a761276/" target="_blank">PySUMMA Modeling for EarthCube 2020</a>
+                </li>
+                <li>
+                    <a href="https://www.hydroshare.org/resource/0289e7cbc5624cfab0cb65e5874deb6c/" target="_blank">HAND model</a>
+                </li>
+                <li>
+                    <a href="http://www.slideshare.net/TanuMalik/geodataspace-simplifying-data-management-tasks-with-globushttps://www.hydroshare.org/resource/e149ec6beaf14c77a7765c8e795eaede/"
+                            target="_blank">SAC-SMA Model for Discharge Simulation for the Doloer River watershed, 2012</a>
+                </li>
+                <li>
+                    <a href="https://www.hydroshare.org/resource/6b386edce74a41e1b4524f8ffb7148b5/"
+                            target="_blank">SUMMA Model for the Reynolds Mountain East catchment using Dakota</a>
+                </li>              
+                <li>
+                    <a href="https://www.hydroshare.org/resource/995479b35b62486783e0da63e937ca89/"
+                            target="_blank">MODFLOW-NET Hydrology Model</a>
+                </li>                                
+                <li>
+                    <a href="https://www.hydroshare.org/resource/aa2a85cfcd9e4e878bad08c7d780950c/"
+                            target="_blank">RDHM UEB and SAC</a>
+                </li>                                
+                <li>
+                    <a href="https://www.hydroshare.org/resource/47906e254de44dd29c18403adb12ff01/"
+                            target="_blank">Seismicity of the Charlevoix Seismic Zone</a>
+                </li>                                                                
+            </ol>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

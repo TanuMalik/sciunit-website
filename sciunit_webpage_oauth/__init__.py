@@ -7,6 +7,7 @@ from werkzeug.exceptions import HTTPException
 import hashlib
 import os
 from . import team
+# import team
 
 
 app = Flask(__name__)
@@ -58,6 +59,13 @@ def docspage():
     return addEtagCaching(response)
 
 
+@app.route('/examples/')
+def examplespage():
+    filename = "examples.html"
+    response = make_response(render_template(filename))
+    return addEtagCaching(response)
+
+
 @app.route('/papers/')
 def paperspage():
     filename = "papers.html"
@@ -97,3 +105,9 @@ def default_home():
     response = make_response(render_template(filename,
                                              code=request.args.get('code')))
     return addEtagCaching(response)
+
+
+# for testing purpose only
+# if __name__ == "__main__":
+#     app.run()
+
